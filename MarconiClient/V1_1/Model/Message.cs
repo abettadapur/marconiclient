@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace MarconiClient.V1.Model
+namespace MarconiClient.V1_1.Model
 {
     public class Message
     {

@@ -6,38 +6,65 @@ using System.Threading.Tasks;
 using Nito.AsyncEx;
 using MarconiClient.V1;
 using MarconiClient.V1.Model;
+using NodeGrooverClient.Model;
 
 namespace MarconiTest
 {
     class Program
     {
+        static List<Song> songs = new List<Song>()
+        {
+            new Song(){Name="Shake me Down", ArtistName="Cage the Elephant", ArtistID=1234567},
+            new Song(){Name="Long Time", ArtistName="Boston", ArtistID=7654321},
+            new Song(){Name="Nightswimming", ArtistName="REM", ArtistID=4567321},
+            new Song(){Name="Landslide", ArtistName="Fleetwood Mac", ArtistID=3521764},
+            new Song(){Name="Power", ArtistName="Kanye West", ArtistID=0909882},
+            new Song(){Name="1901", ArtistName="Phoenix", ArtistID=2934820},
+            new Song(){Name="All Star", ArtistName="Smashmouth", ArtistID=2398402},
+
+        };
         static void Main(string[] args)
         {
             AsyncContext.Run(() => MainAsync(args));
         }
         static async void MainAsync(string[] args)
         {
-           
-            //if (args[0] == "v1")
-            Client client = new MarconiClient.V1.Client("http://10.5.73.12", 8888, "v1");
-            //else
-              //  client = new MarconiClient.V1_1.Client("http://10.5.73.130", 8888, "v1.1");
-            Queue queue2 = await client.createQueue("newQueue2");
-            Queue queue3 = await client.createQueue("newQueue3");
-            Queue queue4 = await client.createQueue("newQueue4");
-            Queue queue5 = await client.createQueue("newQueue5");
-            Message m1 = new Message(queue4);
-            Message m2 = new Message("Hello Marconi");
-            queue3.postMessage(m2);
-            queue3.postMessage(m1);
-            queue4.delete();
-            List<Claim> claims = await queue3.claim(800,800,10);
-            //List<Message> messages = await queue3.getAllMessages();
-            //List<Message> messages2 = await queue3.getMessages(m1.ID,m2.ID);
-            //queue3.postMessage(messages[1]);
-            List<Queue> queues = await client.getQueues();
-            Console.Out.WriteLine(queues);
+            Client client = new Client("http://10.5.73.220", 8888, "v1");
+            Queue test1 = await client.createQueue("test1");
+            Console.Out.WriteLine("Created " + test1.Name + " at " + test1.Uri);
+            Queue test2 = await client.createQueue("test2");
+            Console.Out.WriteLine("Created " + test2.Name + " at " + test2.Uri);
+
+            List<Message> songMessages = new List<Message>();
+            foreach(Song s in songs)
+            {
+                songMessages.Add(new Message(s));
+            }
+            test1.postMessage(songMessages);
+
+            List<Message> results = new List<Message>();
+            string marker = "";
+            do
+            {
+                Tuple<List<Message>, string> result = await test1.getMessages(marker, 1, true, false);
+                results = result.Item1;
+                marker = result.Item2;
+                foreach(Message m in results)
+                {
+                    Console.Out.WriteLine(m);
+                }
+
+            } while (results.Count != 0);
+
+            List<Claim> claims = await test1.claim(300, 300);
+            foreach(Claim c in claims)
+            {
+                Console.Out.Write("Claimed " + c.Message.ID + " with claim id" + c.ClaimID+"....");
+                bool success = await test1.deleteMessage(c.Message.ID, c.ClaimID);
+                Console.Out.WriteLine(success);
+            }
             Console.ReadLine();
+     
         }
     }
 }

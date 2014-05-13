@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace MarconiClient.V1.Model
+namespace MarconiClient.V1_1.Model
 {
     public class Claim
     {

@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace MarconiClient.V1.Model
+namespace MarconiClient.V1_1.Model
 {
     public class Queue
     {
