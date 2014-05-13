@@ -43,12 +43,8 @@ namespace MarconiClient.V1_1.Model
                 _Stats = JsonConvert.DeserializeObject<QueueStats>(json);
             }
         }
-        public async void setMetadata(object metadata)
-        {
-            string json = JsonConvert.SerializeObject(metadata);
-            HttpResponseMessage response = await request.post(Uri + "/metadata", json);
-            response.EnsureSuccessStatusCode();
-        }
+        
+        [Obsolete]
         public async Task<string> getMetadata()
         {
             HttpResponseMessage response = await request.get(Uri + "/metadata");
@@ -73,12 +69,12 @@ namespace MarconiClient.V1_1.Model
                 Console.Out.WriteLine(json);
                 JObject jsonObj = JObject.Parse(json);
                 int counter = 0;
-                foreach(var item in jsonObj["resources"])
+                foreach(var item in jsonObj["links"])
                 {
                     Message m = messages[counter];
-                    string strRegex = @"^/[a-z0-9]*/queues/[a-zA-Z0-9]*/messages/([a-zA-Z0-9]*)";
+                    string strRegex = @"^messages/([a-zA-Z0-9]*)";
                     Regex myRegex = new Regex(strRegex, RegexOptions.None);
-                    string strTargetString = @""+item;
+                    string strTargetString = @""+item["href"].ToString();
                     m.ID = myRegex.Split(strTargetString)[1];
                 }
                 
@@ -208,9 +204,9 @@ namespace MarconiClient.V1_1.Model
             response.EnsureSuccessStatusCode();
             if (response.StatusCode != System.Net.HttpStatusCode.NoContent)
             {
-                JArray jsonArr = JArray.Parse(json);
+                JObject jsonArr = JObject.Parse(json);
                 List<Claim> claims = new List<Claim>();
-                foreach (JObject jsonObj in jsonArr)
+                foreach (JObject jsonObj in jsonArr["messages"])
                 {
                     claims.Add(Claim.Create(jsonObj));
                 }
@@ -233,6 +229,19 @@ namespace MarconiClient.V1_1.Model
         {
             HttpResponseMessage response = await request.delete(Uri + "/claims/" + claimid);
             return response.IsSuccessStatusCode;
+
+        }
+        public async Task<List<Message>> popMessages(int count)
+        {
+            HttpResponseMessage response = await request.delete(Uri + "/messages?pop=" + count);
+            response.EnsureSuccessStatusCode();
+            JObject jsonObj = JObject.Parse(await response.Content.ReadAsStringAsync());
+            List<Message> messages = new List<Message>();
+            foreach(JObject message in jsonObj["messages"])
+            {
+                messages.Add(Message.Create(message));
+            }
+            return messages;
 
         }
   

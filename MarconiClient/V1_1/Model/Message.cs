@@ -53,10 +53,11 @@ namespace MarconiClient.V1_1.Model
             int.TryParse(jsonObj["ttl"].ToString(), out ttl);
             messageObj.Age = age;
             messageObj.TTL = ttl;
-            string strRegex = @"^/[a-z0-9]*/queues/[a-zA-Z0-9\-]*/messages/([a-zA-Z0-9]*)";
-            Regex myRegex = new Regex(strRegex, RegexOptions.None);
+            messageObj.ID = jsonObj["id"].ToString();
+            //string strRegex = @"^/[a-z0-9]*/queues/[a-zA-Z0-9\-]*/messages/([a-zA-Z0-9]*)";
+            /*Regex myRegex = new Regex(strRegex, RegexOptions.None);
             string strTargetString = @"" + jsonObj["href"].ToString();
-            messageObj.ID = myRegex.Split(strTargetString)[1];
+            messageObj.ID = myRegex.Split(strTargetString)[1];*/
             messageObj.Body = jsonObj["body"].ToString();
             return messageObj;
         }

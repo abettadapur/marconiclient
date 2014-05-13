@@ -32,8 +32,12 @@ namespace MarconiTest
             Client client = new Client("http://10.5.73.220", 8888, "v1");
             Queue test1 = await client.createQueue("test1");
             Console.Out.WriteLine("Created " + test1.Name + " at " + test1.Uri);
+            Console.Out.Write("Does it exist....");
+            Console.Out.WriteLine(await client.isQueueCreated(test1.Name));
             Queue test2 = await client.createQueue("test2");
             Console.Out.WriteLine("Created " + test2.Name + " at " + test2.Uri);
+            Console.Out.Write("Does it exist....");
+            Console.Out.WriteLine(await client.isQueueCreated(test1.Name));
 
             List<Message> songMessages = new List<Message>();
             foreach(Song s in songs)
@@ -63,6 +67,7 @@ namespace MarconiTest
                 bool success = await test1.deleteMessage(c.Message.ID, c.ClaimID);
                 Console.Out.WriteLine(success);
             }
+            
             Console.ReadLine();
      
         }

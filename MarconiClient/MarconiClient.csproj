@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Util\QueueDeletedException.cs" />
     <Compile Include="Util\RawJsonConverter.cs" />
     <Compile Include="V1\Client.cs" />
     <Compile Include="V1\Model\Claim.cs" />
