@@ -13,7 +13,7 @@ using MarconiClient.Util;
 using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
 
-namespace MarconiUnitTest
+namespace MarconiUnitTest.V1_1
 {
     [TestClass]
     public class QueueTest
@@ -23,7 +23,7 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object); //called from this object
@@ -38,7 +38,7 @@ namespace MarconiUnitTest
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             HttpResponseMessage badresponse = new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(badresponse));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(badresponse));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object); //called from this object
@@ -54,6 +54,7 @@ namespace MarconiUnitTest
             var mock = new Mock<IRequest>();
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata",It.IsAny<string>())).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             await queue.setMetadata("Metadata");
@@ -70,6 +71,7 @@ namespace MarconiUnitTest
             var mock = new Mock<IRequest>();
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata", It.IsAny<string>())).Returns(Task.FromResult(badresponse));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             await queue.setMetadata("Metadata");
@@ -87,7 +89,7 @@ namespace MarconiUnitTest
 
             var mock = new Mock<IRequest>();
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/metadata")).Returns(Task.FromResult(response));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
@@ -108,7 +110,7 @@ namespace MarconiUnitTest
 
             var mock = new Mock<IRequest>();
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/metadata")).Returns(Task.FromResult(badresponse));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
@@ -134,7 +136,7 @@ namespace MarconiUnitTest
 
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/messages", It.IsAny<string>())).Returns(Task.FromResult(response));
 
@@ -164,7 +166,7 @@ namespace MarconiUnitTest
 
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/messages", It.IsAny<string>())).Returns(Task.FromResult(response));
 
@@ -190,7 +192,7 @@ namespace MarconiUnitTest
             response.Content = new StringContent(jsonstr);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages/31")).Returns(Task.FromResult(response));
 
@@ -234,7 +236,7 @@ namespace MarconiUnitTest
             response.Content = new StringContent(jsonstr);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?ids=50b68a50d6f5b8c8a7c62b01,50b68a50d6f5b8c8a7c62b02")).Returns(Task.FromResult(response));
 
@@ -273,7 +275,7 @@ namespace MarconiUnitTest
             response.Content = new StringContent(jsonstr);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?limit=1&echo=True&include_claimed=True")).Returns(Task.FromResult(response));
 
@@ -297,11 +299,24 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             Assert.IsTrue(await queue.CheckExist());
+        }
+        
+        [TestMethod]
+        public async Task checkExistNegative()
+        {
+            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+            HttpResponseMessage badresponse = new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
+            var mock = new Mock<IRequest>();
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(badresponse));
+
+            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
+            Assert.IsFalse(await queue.CheckExist());
         }
 
         [TestMethod]
@@ -309,7 +324,7 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo=> foo.delete("http://localhost:200/v1/queues/newQueue/messages/31")).Returns(Task.FromResult(response));
 
@@ -322,7 +337,7 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.delete("http://localhost:200/v1/queues/newQueue/messages?ids=31,32,33")).Returns(Task.FromResult(response));
 
@@ -338,7 +353,7 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.delete("http://localhost:200/v1/queues/newQueue/messages/31?claim_id=40")).Returns(Task.FromResult(response));
 
@@ -353,7 +368,7 @@ namespace MarconiUnitTest
         {
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.delete("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
 
@@ -392,7 +407,7 @@ namespace MarconiUnitTest
             response.Content = new StringContent(responsestr);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/claims?limit=10", jsonbody)).Returns(Task.FromResult(response));
 
@@ -421,7 +436,7 @@ namespace MarconiUnitTest
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.patch("http://localhost:200/v1/queues/newQueue/claims/claimid31", jsonbody)).Returns(Task.FromResult(response));
 
@@ -438,7 +453,7 @@ namespace MarconiUnitTest
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
 
             var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
             mock.Setup(foo => foo.delete("http://localhost:200/v1/queues/newQueue/claims/claimid31")).Returns(Task.FromResult(response));
 

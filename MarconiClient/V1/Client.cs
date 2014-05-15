@@ -44,7 +44,7 @@ namespace MarconiClient.V1
         public string Version { get; set; }
 
         private string url;
-        private MarconiRequest request;
+        private IRequest request;
 
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace MarconiClient.V1
             this.Port = port;
             this.Version = version;
             this.url = Host + ":" + Port + "/" + Version;
-            request = new MarconiRequest();
+            this.request = request;
             request.ClientId = "F93812A4-D9E4-11E3-BB74-A91C9A125B5A";
         }
 

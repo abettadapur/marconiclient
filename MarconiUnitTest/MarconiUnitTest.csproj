@@ -42,9 +42,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NMock3">
-      <HintPath>..\packages\NMock3.3.5.44\lib\net40\NMock3.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
@@ -70,9 +67,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="QueueTest.cs" />
+    <Compile Include="V1\ClientTest.cs" />
+    <Compile Include="V1\QueueTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestMock.cs" />
+    <Compile Include="V1_1\ClientTest.cs" />
+    <Compile Include="V1_1\QueueTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarconiClient\MarconiClient.csproj">
@@ -84,6 +83,7 @@
       <Name>MarconiTest</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
