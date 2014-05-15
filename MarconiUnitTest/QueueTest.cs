@@ -212,12 +212,84 @@ namespace MarconiUnitTest
         [TestMethod]
         public async Task getMessages()
         {
+            List<Dictionary<string, object>> responsebody = new List<Dictionary<string, object>>();
+            Dictionary<string, object> firstMessage = new Dictionary<string,object>();
+            firstMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["ttl"] = 800;
+            firstMessage["age"] = 32;
+            firstMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeVideo" }, { "jobid", 58229 } };
 
+            Dictionary<string, object> secondMessage = new Dictionary<string, object>();
+            secondMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b02";
+            secondMessage["ttl"] = 800;
+            secondMessage["age"] = 32;
+            secondMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeAudio" }, { "jobid", 58230 } };
+
+            responsebody.Add(firstMessage);
+            responsebody.Add(secondMessage);
+
+            string jsonstr = JsonConvert.SerializeObject(responsebody);
+
+            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+            response.Content = new StringContent(jsonstr);
+
+            var mock = new Mock<IRequest>();
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?ids=50b68a50d6f5b8c8a7c62b01,50b68a50d6f5b8c8a7c62b02")).Returns(Task.FromResult(response));
+
+
+            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
+
+            List<Message> messages = await queue.getMessages("50b68a50d6f5b8c8a7c62b01", "50b68a50d6f5b8c8a7c62b02");
+            Assert.AreEqual("50b68a50d6f5b8c8a7c62b01", messages[0].ID);
+            Assert.AreEqual("50b68a50d6f5b8c8a7c62b02", messages[1].ID);
+
+            mock.Verify(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?ids=50b68a50d6f5b8c8a7c62b01,50b68a50d6f5b8c8a7c62b02"), Times.Once);
         }
 
+        [TestMethod]
         public async Task getMessagesMarker()
         {
+            Dictionary<string, object> responsebody = new Dictionary<string, object>();
+            List<Dictionary<string, object>> links = new List<Dictionary<string, object>>();
+            Dictionary<string, object> link = new Dictionary<string, object>();
+            link["rel"] = "next";
+            link["href"] = "/v1/queues/fizbit/messages?marker=6244-244224-783&limit=10";
+            links.Add(link);
+            List<Dictionary<string, object>> messages = new List<Dictionary<string, object>>();
+            Dictionary<string, object> firstMessage = new Dictionary<string, object>();
+            firstMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["ttl"] = 800;
+            firstMessage["age"] = 32;
+            firstMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeVideo" }, { "jobid", 58229 } };
+            messages.Add(firstMessage);
+            responsebody["links"] = links;
+            responsebody["messages"] = messages;
 
+            string jsonstr = JsonConvert.SerializeObject(responsebody);
+
+            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+            response.Content = new StringContent(jsonstr);
+
+            var mock = new Mock<IRequest>();
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/status")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?limit=1&echo=True&include_claimed=True")).Returns(Task.FromResult(response));
+
+
+            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
+            Tuple<List<Message>,string> tuple = await queue.getMessages("", 1, true, true);
+
+            Assert.AreEqual("6244-244224-783", tuple.Item2);
+            Assert.AreEqual("50b68a50d6f5b8c8a7c62b01", tuple.Item1[0].ID);
+
+            mock.Verify(foo => foo.get("http://localhost:200/v1/queues/newQueue/messages?limit=1&echo=True&include_claimed=True"), Times.Once);
+
+
+
+
+            
         }
 
         [TestMethod]

@@ -127,7 +127,7 @@ namespace MarconiClient.V1_1.Model
                 int counter = 0;
                 foreach (var item in jsonObj["links"])
                 {
-                    Message m = messages[counter];
+                    Message m = messages[counter++];
                     string strRegex = @"^messages/([a-zA-Z0-9]*)";
                     Regex myRegex = new Regex(strRegex, RegexOptions.None);
                     string strTargetString = @"" + item["href"].ToString();
@@ -219,7 +219,7 @@ namespace MarconiClient.V1_1.Model
             if (await CheckExist())
             {
                 StringBuilder parameters = new StringBuilder("?");
-                if (marker != null || marker != "")
+                if (marker != null && marker != "")
                     parameters.Append("marker=" + marker + "&");
                 parameters.Append("limit=" + limit + "&");
                 parameters.Append("echo=" + echo + "&");

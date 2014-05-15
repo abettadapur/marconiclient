@@ -239,7 +239,7 @@ namespace MarconiClient.V1.Model
             if (await CheckExist())
             {
                 StringBuilder parameters = new StringBuilder("?");
-                if (marker != null || marker != "")
+                if (marker != null && marker != "")
                     parameters.Append("marker=" + marker + "&");
                 parameters.Append("limit=" + limit + "&");
                 parameters.Append("echo=" + echo + "&");
