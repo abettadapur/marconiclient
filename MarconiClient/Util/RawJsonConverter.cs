@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MarconiClient.Util
 {
-    public class RawJsonConverter : JsonConverter
+    internal class RawJsonConverter : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {

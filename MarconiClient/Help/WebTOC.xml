@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="24f2405c-3490-4818-bc8d-d9eaa28d79a5" Title="MarconiClient.Net" Url="html/c237499a-122b-0f08-2e82-94376b683c1e.htm">
+    <HelpTOCNode Id="f64982c1-f71d-48ec-8cb6-ec2e1f1d2ef8" Title="IRequest Interface" Url="html/e76b8387-95b6-57f1-7c93-71c4d6f80b00.htm">
+      <HelpTOCNode Title="IRequest Members" Url="html/8698cdae-f5cf-a841-1ac6-78d49841df98.htm" />
+      <HelpTOCNode Id="21f8dcfc-6c6f-4c17-9e55-e14137424a6e" Title="IRequest Methods" Url="html/5ccf9111-2ad0-9b07-977d-f43c2850be0b.htm">
+        <HelpTOCNode Title="delete Method " Url="html/5f13f806-4441-c955-cd62-dde8e7e055c3.htm" />
+        <HelpTOCNode Title="get Method " Url="html/b2796664-d620-860c-b3a1-4fa5fd8b60d1.htm" />
+        <HelpTOCNode Title="patch Method " Url="html/ae434ea0-4b11-b631-d482-57675e61369c.htm" />
+        <HelpTOCNode Title="post Method " Url="html/bcb431bf-1ceb-ab27-5a7b-ae1eae5bac91.htm" />
+        <HelpTOCNode Title="put Method " Url="html/d9ee9fb5-f845-18c1-a243-b8f8ccccf186.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9fc439ec-0db9-43c6-8fd6-23239b6eae18" Title="IRequest Properties" Url="html/7b499b97-418c-54ed-08f9-4d94e6a2ea9b.htm">
+        <HelpTOCNode Title="ClientId Property " Url="html/9acb4929-168e-0fca-0d5a-01990db7fac0.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f9aab8db-5a7d-4ce6-a713-1c14beae4369" Title="MarconiRequest Class" Url="html/8ef8dc82-1cb0-338b-1f84-90cbb072d028.htm">
+      <HelpTOCNode Title="MarconiRequest Members" Url="html/9971b4b4-637a-e66b-7dc0-715068b5379d.htm" />
+      <HelpTOCNode Title="MarconiRequest Constructor " Url="html/9826ad01-b558-e1b4-09f9-8c614926a0f6.htm" />
+      <HelpTOCNode Id="10a8519a-3101-4890-9db4-15780101dd47" Title="MarconiRequest Methods" Url="html/8d6fa7ac-6cb8-6740-ddde-94d63315dd7b.htm">
+        <HelpTOCNode Title="delete Method " Url="html/17fc9eb4-2052-486b-6b46-ef006f004f47.htm" />
+        <HelpTOCNode Title="get Method " Url="html/8609bc5b-a243-969c-3561-1ae214799e49.htm" />
+        <HelpTOCNode Title="patch Method " Url="html/94b24957-542d-0e81-2334-2d85d4e45922.htm" />
+        <HelpTOCNode Title="post Method " Url="html/a9a09547-3ac2-055d-deec-e47603a87597.htm" />
+        <HelpTOCNode Title="put Method " Url="html/4f8a76c7-3ba2-bc62-16a0-99d6579924c1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3af5e1c6-6810-4c86-a7a8-a2369dd6a744" Title="MarconiRequest Properties" Url="html/dbadbb02-0ebc-7a95-d07b-c17bc92f2bfa.htm">
+        <HelpTOCNode Title="ClientId Property " Url="html/9c9055b4-7f52-f47c-98ce-0afacfd851de.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f68e64d5-a7d0-4f81-93e4-d0c36cce5ba9" Title="MarconiClient.Util" Url="html/bc4f8447-10f3-3386-8bbb-f21bb2f84eb8.htm">
+    <HelpTOCNode Id="76448932-3ed3-44bb-8163-0c7659cca04c" Title="QueueMissingException Class" Url="html/c7b9b459-b32b-e53f-cd55-811924c15e7d.htm">
+      <HelpTOCNode Title="QueueMissingException Members" Url="html/7405a5aa-fbfb-b0f6-908a-738ec61865eb.htm" />
+      <HelpTOCNode Title="QueueMissingException Constructor " Url="html/c3e47a3e-bfe0-88dd-1a91-e8c4205c2e0e.htm" />
+      <HelpTOCNode Title="QueueMissingException Methods" Url="html/8696faa9-c45e-0b18-37ad-874c0a053573.htm" />
+      <HelpTOCNode Id="37e99672-5672-4491-a22e-01e23adb4149" Title="QueueMissingException Properties" Url="html/23c4afe9-c581-4f47-a578-7b932d143725.htm">
+        <HelpTOCNode Title="Message Property " Url="html/93432e83-1fec-0605-5e92-ee4c63a029cb.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="QueueMissingException Events" Url="html/6d8b2bc5-0d9e-e29d-8796-5d1f7877b84a.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="6cde72d5-2082-44b0-a7c5-03b026cbe5da" Title="MarconiClient.V1" Url="html/fad3a68c-657c-422e-7a66-dcecd697c3f8.htm">
+    <HelpTOCNode Id="8b252dfb-b55e-4c34-8b40-13e4d58b8cb9" Title="Client Class" Url="html/28fe11cd-4d8a-c1d6-fa24-9b939b2aeb52.htm">
+      <HelpTOCNode Title="Client Members" Url="html/e08eb1b9-7642-034b-d7ae-61d95841b745.htm" />
+      <HelpTOCNode Title="Client Constructor " Url="html/3ae98c06-6f84-abcb-889d-79e735a97a94.htm" />
+      <HelpTOCNode Id="91a0d13f-3609-41f1-98a1-28a4a9fdd7c7" Title="Client Methods" Url="html/84dfd0a4-c1b8-9ea8-df3b-601acafd7a3e.htm">
+        <HelpTOCNode Title="createQueue Method " Url="html/c20d1b33-e61e-ee66-782c-40cb78144a34.htm" />
+        <HelpTOCNode Title="getQueues Method " Url="html/5aec70c5-aabc-17c3-0ac2-c40ae3465e87.htm" />
+        <HelpTOCNode Title="isQueueCreated Method " Url="html/b3ad3403-3fa6-b022-cd02-3563429d1a74.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fa04a1b3-26c7-456c-a064-4380e63df701" Title="Client Properties" Url="html/2aa5e5ca-6956-2992-bf5e-be1de61521bd.htm">
+        <HelpTOCNode Title="Host Property " Url="html/17db237b-aaf6-6d76-d49e-519e6c26253d.htm" />
+        <HelpTOCNode Title="Port Property " Url="html/1faff352-651a-af3a-01db-3bfd77139dee.htm" />
+        <HelpTOCNode Title="Version Property " Url="html/3e29a5c2-1ff6-de2a-96a5-92a274dea781.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4be215a9-805c-43ac-b727-410e5ebc69c3" Title="MarconiClient.V1.Model" Url="html/f57df8e6-896f-1180-5ca4-bac78203989f.htm">
+    <HelpTOCNode Id="d73ec0f5-2a19-44b2-adce-362ded9803a0" Title="Claim Class" Url="html/b2ea14fe-b3b3-9e3b-c868-44413af461de.htm">
+      <HelpTOCNode Title="Claim Members" Url="html/d4eb5f0e-25ac-07a1-f610-96e66cca92a1.htm" />
+      <HelpTOCNode Id="64a0f836-5afb-46bf-adb1-283577cb80b7" Title="Claim Methods" Url="html/cf3368a4-b044-9804-1642-cb6a5e3ae404.htm">
+        <HelpTOCNode Title="Create Method " Url="html/56d3612b-9e84-7be2-f504-7980ec41ab35.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e7ad9596-ebab-4c13-9fea-df2bc59dc45c" Title="Claim Properties" Url="html/3ae9b0c5-17ae-c8c2-a2f9-c9bc669d22b0.htm">
+        <HelpTOCNode Title="ClaimID Property " Url="html/9ff1b8a2-5e4f-92af-bab3-5f62e333202f.htm" />
+        <HelpTOCNode Title="Message Property " Url="html/b7636e72-0f66-da21-34d2-dcd8dfd1166a.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f51807e3-c01e-4183-8486-1ba28d09c3af" Title="Message Class" Url="html/27ec63cd-989c-db11-be2d-1a3cffad0da3.htm">
+      <HelpTOCNode Title="Message Members" Url="html/c043c28d-df34-1534-ba5d-551c2badaeec.htm" />
+      <HelpTOCNode Id="c0a6c18a-7294-4527-a39d-3d0b2f96a3bc" Title="Message Constructor " Url="html/41fd946e-c8b5-4e4d-e452-995cb7bdf1cc.htm">
+        <HelpTOCNode Title="Message Constructor " Url="html/cb273656-f1d6-f3cf-0a3a-db7f6094fbf6.htm" />
+        <HelpTOCNode Title="Message Constructor (Int32)" Url="html/51df6a6c-df27-c7d4-d5bb-01240e8e4dfd.htm" />
+        <HelpTOCNode Title="Message Constructor (Object)" Url="html/314bb2d3-94c8-df50-1b4d-a04e811ecfb4.htm" />
+        <HelpTOCNode Title="Message Constructor (Int32, Object)" Url="html/49afbe72-0ecd-d6ea-1c49-b068d902d817.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c13f6589-a785-48d0-877a-9106855cfc2e" Title="Message Methods" Url="html/9fdeac34-0386-c97c-4a63-983f2a7c7f90.htm">
+        <HelpTOCNode Title="Create Method " Url="html/2c8de6cf-b525-15f4-4b3b-68f4875f4cfd.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/c5f2c86e-3a47-088d-dcc7-6b26b97d75dc.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="28f10208-47a2-4c32-bc3b-56bdb0d2d499" Title="Message Properties" Url="html/25c2010c-ec07-5e54-6d95-8fa9894fcc5d.htm">
+        <HelpTOCNode Title="Age Property " Url="html/3fc7a984-8bc1-e0de-1206-627b0a9b918f.htm" />
+        <HelpTOCNode Title="Body Property " Url="html/2ad5164f-6032-d1e8-b582-38e65bfa5dee.htm" />
+        <HelpTOCNode Title="ID Property " Url="html/2c7b3bcb-8000-b029-fea3-4c9ee6e97957.htm" />
+        <HelpTOCNode Title="TTL Property " Url="html/92911425-1122-bf4f-0abe-11b67af20aa2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0db8c42c-06f7-4dd2-abbd-beb45b33d1e1" Title="MessageStats Class" Url="html/40d09c8c-21a5-332c-79ec-398e90c30837.htm">
+      <HelpTOCNode Title="MessageStats Members" Url="html/5846f84d-1e22-0c1c-06c9-9d1f09b87c3d.htm" />
+      <HelpTOCNode Title="MessageStats Constructor " Url="html/65df40e5-97c5-5bbc-2876-5f138fc20efc.htm" />
+      <HelpTOCNode Title="MessageStats Methods" Url="html/d676dbf0-7ed1-d191-6402-732bd176ce02.htm" />
+      <HelpTOCNode Id="c6868c04-3371-4ddb-8c78-e6e4b6c7b38f" Title="MessageStats Properties" Url="html/f19c1972-1233-ad1d-ef5a-4e33e6acdec0.htm">
+        <HelpTOCNode Title="Claimed Property " Url="html/b52e9847-9a86-82c2-5e32-73f4e00c45df.htm" />
+        <HelpTOCNode Title="Free Property " Url="html/bbeb4157-bc44-19d7-60d0-4d19ddd22f59.htm" />
+        <HelpTOCNode Title="Total Property " Url="html/2dddec30-4170-805c-b4a0-fba9d7536da8.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cb327a6b-4e10-44c6-8fca-deb06fb2d901" Title="Queue Class" Url="html/466f5781-343b-340f-ae14-b7a96b1f81f8.htm">
+      <HelpTOCNode Title="Queue Members" Url="html/485b2682-c543-acbe-c463-5b9c7c0267ab.htm" />
+      <HelpTOCNode Id="47a925f2-0acb-4035-bd77-45f8b54f93e8" Title="Queue Methods" Url="html/c66d0c21-2d1f-ecba-b2a4-e1355d28cd1b.htm">
+        <HelpTOCNode Id="7c5d2b6c-0d3d-4d62-bb6f-09c1358e82d8" Title="claim Method " Url="html/62b1c6d2-a211-fdc0-ec93-c45cfbfc9889.htm">
+          <HelpTOCNode Title="claim Method (Int32, Int32)" Url="html/919f236d-c241-29fe-10e4-66262ac15b69.htm" />
+          <HelpTOCNode Title="claim Method (Int32, Int32, Int32)" Url="html/cd9dccff-c1f4-d93e-5f65-d476db314d22.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="delete Method " Url="html/2bb82e95-b566-54a9-0b28-8cf2f0c58c74.htm" />
+        <HelpTOCNode Id="faaea61f-423e-4ca2-a8e9-e1700c4ff304" Title="deleteMessage Method " Url="html/55f45d3e-5581-ee9b-efc9-aec95b99f4cc.htm">
+          <HelpTOCNode Title="deleteMessage Method (String)" Url="html/04e7bca9-05b0-7872-27e4-0a815a5e03f1.htm" />
+          <HelpTOCNode Title="deleteMessage Method (String, String)" Url="html/9f1b849d-13e9-c7ee-292d-1115221f0066.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="deleteMessages Method " Url="html/9ff45284-22fb-b3f2-2746-e0eed4aa5a6c.htm" />
+        <HelpTOCNode Title="getClaim Method " Url="html/31aa114d-cda4-933a-f7d7-0ac8a1f67179.htm" />
+        <HelpTOCNode Title="getMessage Method " Url="html/89965edc-111a-11ad-cb87-d1f93b268d88.htm" />
+        <HelpTOCNode Id="31bff6ad-d7ee-4c23-a6ed-0ea9656fdb97" Title="getMessages Method " Url="html/7eead5cd-cf48-8e14-0504-458b461f15fd.htm">
+          <HelpTOCNode Title="getMessages Method (String, String[])" Url="html/b3d9d992-f2f2-4f5a-d7a1-317c2b5bd607.htm" />
+          <HelpTOCNode Title="getMessages Method (String, Int32, Boolean, Boolean)" Url="html/4c26e09f-dfb4-e958-3347-834b60ab8ee7.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="getMetadata Method " Url="html/9c3eb58d-3fc0-7ad4-3f4a-8ed38fa516b7.htm" />
+        <HelpTOCNode Title="patchClaim Method " Url="html/0ef7b0ea-e819-b474-fcda-b9b023b25eed.htm" />
+        <HelpTOCNode Id="f56789b7-359b-4a34-831c-59144534b192" Title="postMessage Method " Url="html/b7df42da-44f0-7e2f-e2ab-03ec044f2180.htm">
+          <HelpTOCNode Title="postMessage Method (Message)" Url="html/aaebf9a6-466d-d3de-a53b-606f9340746f.htm" />
+          <HelpTOCNode Title="postMessage Method (List(Message))" Url="html/b9c30ef3-789d-f244-936a-93ed2c70103f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="releaseClaim Method " Url="html/188855f4-7d48-1389-cdfc-ff8d9d861396.htm" />
+        <HelpTOCNode Title="setMetadata Method " Url="html/75b5a826-0001-8029-97e5-027c6cae96b5.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/ee386a5f-30aa-7826-cf0b-52ab32054b3f.htm" />
+        <HelpTOCNode Title="updateStats Method " Url="html/225994e9-9eea-c15a-ca20-91c8c70f4090.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2c6269e3-b2f7-422b-b755-9f3ae33573ea" Title="Queue Properties" Url="html/d7e324ee-1626-eb9d-9425-4a70180fb37e.htm">
+        <HelpTOCNode Title="Name Property " Url="html/2096c329-7efd-dd9d-ddba-e596c7fac42a.htm" />
+        <HelpTOCNode Title="Stats Property " Url="html/8bbe2b74-c2e8-02f1-cd61-c02c70a1b201.htm" />
+        <HelpTOCNode Title="Uri Property " Url="html/206558e5-0853-d055-3757-9e97b52c7e46.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f4c6019c-c045-48ca-a7bd-291e3dfcffc6" Title="QueueStats Class" Url="html/23cae34b-e646-8d4d-6b8f-a5e11eab18ec.htm">
+      <HelpTOCNode Title="QueueStats Members" Url="html/1889822d-092f-202d-599f-5bd33f56793f.htm" />
+      <HelpTOCNode Title="QueueStats Constructor " Url="html/87ab801a-6a7c-3207-d947-5c32cd95c97c.htm" />
+      <HelpTOCNode Title="QueueStats Methods" Url="html/f618f072-5990-b4b5-c894-e3ce7b48fe62.htm" />
+      <HelpTOCNode Id="00253234-31f7-4029-8c64-ac8fc8078d27" Title="QueueStats Properties" Url="html/98667c94-acba-a364-b23b-88eb5d00f407.htm">
+        <HelpTOCNode Title="Messages Property " Url="html/78afa022-f11a-0379-b8cb-b3ce59147c4a.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="73a893bd-1c12-4a0a-a08a-2db66d700a5d" Title="MarconiClient.V1_1" Url="html/37a6588f-0a5b-dd00-1dc8-66284e1438e2.htm">
+    <HelpTOCNode Id="53b1853e-44b7-495a-8728-7b5dafd30bef" Title="Client Class" Url="html/6d7b8a17-0bc3-8ef4-eb01-1dd75b1a78ec.htm">
+      <HelpTOCNode Title="Client Members" Url="html/91837584-abfd-a694-7b01-c4761e0158c0.htm" />
+      <HelpTOCNode Title="Client Constructor " Url="html/a967f3f1-b363-be79-eff1-08fb17708715.htm" />
+      <HelpTOCNode Id="d4d03d8e-1827-4e0e-b335-51ad4667a4d9" Title="Client Methods" Url="html/b3747157-7cf3-a951-1121-5f3e4415ec2c.htm">
+        <HelpTOCNode Title="createQueue Method " Url="html/047b73a0-36b2-79ba-9fe1-01c41e33b08e.htm" />
+        <HelpTOCNode Title="createShard Method " Url="html/601c3180-97b6-e052-7a21-3f50f52d7a3c.htm" />
+        <HelpTOCNode Title="getQueues Method " Url="html/d053b90f-5278-a9f1-d3b4-1fd194b50e90.htm" />
+        <HelpTOCNode Title="getShards Method " Url="html/fed75280-e809-43c0-26d3-9fbab9f6b55c.htm" />
+        <HelpTOCNode Title="isQueueCreated Method " Url="html/50ef4654-33eb-11f8-47f8-2aba20c25317.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="377d29c7-9a19-4af3-b5f8-9ada23ab6a3c" Title="Client Properties" Url="html/e78a74cf-38de-b225-2e4b-7ba08f8d0db4.htm">
+        <HelpTOCNode Title="Host Property " Url="html/c4862656-266b-495a-430f-068f7f9ed88f.htm" />
+        <HelpTOCNode Title="Port Property " Url="html/cc36244e-698f-b26c-1207-70452a4bfeb5.htm" />
+        <HelpTOCNode Title="Version Property " Url="html/c3c3934c-2587-53e1-c7b1-4c006be9ee04.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="1b9ae31c-f519-4cb4-8d4e-e8c696b724cc" Title="MarconiClient.V1_1.Model" Url="html/52d51b79-b2cf-397f-533f-c984cea34254.htm">
+    <HelpTOCNode Id="1aa93c35-8ea2-4f0a-9b1d-0070a80e92ba" Title="Claim Class" Url="html/ec6c3e36-9b82-f497-4427-940a00176ce9.htm">
+      <HelpTOCNode Title="Claim Members" Url="html/fe517526-80ee-61e3-8cfa-f2e4d209c7bf.htm" />
+      <HelpTOCNode Id="c3df5027-7116-44c6-990b-c474705a9910" Title="Claim Methods" Url="html/b29d3730-76d4-59a7-a5e8-0e9616468429.htm">
+        <HelpTOCNode Title="Create Method " Url="html/217cfde1-2e0a-2f19-d5ec-1290f82cb68b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1ceba1e4-591f-42d0-99f9-c7dc2224f6f6" Title="Claim Properties" Url="html/962276ea-c643-3b01-c83d-03a8f5b610a9.htm">
+        <HelpTOCNode Title="ClaimID Property " Url="html/9743fe65-1261-1da1-5a5e-1aae80085edd.htm" />
+        <HelpTOCNode Title="Message Property " Url="html/af5ae2df-fc71-cdae-7592-d3183fc09433.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4e748915-654a-46ce-af54-605ae0e485ed" Title="Message Class" Url="html/5e8444b0-0c47-f2b9-7708-60c5be38b10e.htm">
+      <HelpTOCNode Title="Message Members" Url="html/4426b621-5d8b-c30d-8992-9ad9f25d2ef9.htm" />
+      <HelpTOCNode Id="adcb01dd-4931-4039-a7b3-8315335dc71c" Title="Message Constructor " Url="html/d21b249e-1b44-6749-7c28-60a7deed06e8.htm">
+        <HelpTOCNode Title="Message Constructor " Url="html/b5101ad9-e217-c496-ed5b-90d320a1ffa9.htm" />
+        <HelpTOCNode Title="Message Constructor (Int32)" Url="html/9d177344-5f7d-9a95-6fd9-08ca651a1112.htm" />
+        <HelpTOCNode Title="Message Constructor (Object)" Url="html/f482c8cd-0e80-6ed2-5507-e4b32a575ce6.htm" />
+        <HelpTOCNode Title="Message Constructor (Int32, Object)" Url="html/a9c0fab6-9edb-4da9-63c9-62da087147a2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="97bb72c1-9f17-4fa1-90a7-963de8cd8494" Title="Message Methods" Url="html/f2fb7c44-d6c7-495a-bfff-4e5123cac23a.htm">
+        <HelpTOCNode Title="Create Method " Url="html/1078a1ce-4cfc-24b1-935b-4478c9dda6dd.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/96d32673-7f77-5cbf-2f82-1380c50a867a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="673cbaf5-53c5-4267-b59a-129e94017829" Title="Message Properties" Url="html/4539a413-8120-438d-7e56-641a1776543f.htm">
+        <HelpTOCNode Title="Age Property " Url="html/7522658e-6ea7-baf7-fe27-03fa7662f35b.htm" />
+        <HelpTOCNode Title="Body Property " Url="html/08bac0e9-99fd-a4bb-2b7b-0e553d55df67.htm" />
+        <HelpTOCNode Title="ID Property " Url="html/4d405a2f-516d-c169-98db-58b1578d2b6c.htm" />
+        <HelpTOCNode Title="TTL Property " Url="html/b0a52161-33ac-b02c-9b03-029b93a72bf5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e3f5a7e7-4dce-481b-93f6-a0c0c0d041de" Title="MessageStats Class" Url="html/93527c7a-b92e-f427-e3d8-4fd29dff5b98.htm">
+      <HelpTOCNode Title="MessageStats Members" Url="html/9050c0fd-bdd6-b7cd-f49c-e8ce0fcca85d.htm" />
+      <HelpTOCNode Title="MessageStats Constructor " Url="html/c6ab7703-c33b-f825-0c91-e666f51cc774.htm" />
+      <HelpTOCNode Title="MessageStats Methods" Url="html/ba945dec-026f-e14e-ffb9-f2d44831604b.htm" />
+      <HelpTOCNode Id="862d2a4a-26bd-4444-9a0d-ac20c6aa1285" Title="MessageStats Properties" Url="html/1c222a3e-3844-e884-5d98-a6c56324dc1a.htm">
+        <HelpTOCNode Title="Claimed Property " Url="html/0effda9b-f1ac-abb1-d8f2-25dcde4eb714.htm" />
+        <HelpTOCNode Title="Free Property " Url="html/ef0c3433-217f-ade2-aacc-092290daf558.htm" />
+        <HelpTOCNode Title="Total Property " Url="html/80b7ba10-8de9-f00b-9f34-14e6307b6f75.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bead62f4-1b54-42d7-a7da-fec2b20e2011" Title="Queue Class" Url="html/28c695a9-6030-2af2-b81c-c43f2ba1ac98.htm">
+      <HelpTOCNode Title="Queue Members" Url="html/b6040a00-376f-b141-450b-355bb0d1b975.htm" />
+      <HelpTOCNode Id="3b17adda-7eb1-4b19-a9b8-e804e0f2d60d" Title="Queue Methods" Url="html/eb57771e-dc53-35db-6994-b1449704dbd8.htm">
+        <HelpTOCNode Id="323907c1-4028-48d5-be35-546e4bdcc989" Title="claim Method " Url="html/cd411340-2e0a-95e9-448c-245ff00bf4cf.htm">
+          <HelpTOCNode Title="claim Method (Int32, Int32)" Url="html/fb437190-9753-6f27-c361-6ab6af140f67.htm" />
+          <HelpTOCNode Title="claim Method (Int32, Int32, Int32)" Url="html/3d164f3d-ee58-8235-fd13-ac6fd83bca58.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="delete Method " Url="html/b3c4acb7-24e5-93ff-67df-c530a7b759c3.htm" />
+        <HelpTOCNode Id="812bb6a8-4ab5-4b67-8f58-2ca3bb53b585" Title="deleteMessage Method " Url="html/b905c371-10f9-d0d8-7572-f77212b51dce.htm">
+          <HelpTOCNode Title="deleteMessage Method (String)" Url="html/ec90c39e-645a-918c-8dbc-774315dbf351.htm" />
+          <HelpTOCNode Title="deleteMessage Method (String, String)" Url="html/25d91c79-310e-36aa-bb53-c535befa9eb5.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="deleteMessages Method " Url="html/50d6d26f-cea6-ea26-b7dc-b2eb6e45cd99.htm" />
+        <HelpTOCNode Title="getClaim Method " Url="html/9d3b4958-18ab-e94c-a528-cd219f1b0954.htm" />
+        <HelpTOCNode Title="getMessage Method " Url="html/c7c99379-dbb0-d9df-af02-0f752cdfbf5f.htm" />
+        <HelpTOCNode Id="f5cd6c96-0aea-457d-a695-7547d6f3af03" Title="getMessages Method " Url="html/938c4d59-21d3-77da-f448-0686ea5ac22e.htm">
+          <HelpTOCNode Title="getMessages Method (String, String[])" Url="html/e1cdb6db-a73f-239f-4d34-f4ca6571b109.htm" />
+          <HelpTOCNode Title="getMessages Method (String, Int32, Boolean, Boolean)" Url="html/98bce1f0-243a-19e2-bfcb-73380bf7534f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="getMetadata Method " Url="html/48eb188d-2e07-8453-6cbb-87e00630b354.htm" />
+        <HelpTOCNode Title="patchClaim Method " Url="html/dc5ebecf-4746-99eb-0b59-1aa59f2cc963.htm" />
+        <HelpTOCNode Title="popMessages Method " Url="html/082f089c-5856-f631-7b1c-c64285f01a11.htm" />
+        <HelpTOCNode Id="54bc5034-01d7-4d21-81f4-8c08c3807de6" Title="postMessage Method " Url="html/2b4f2fec-adb2-a060-acc0-9f764d55ac61.htm">
+          <HelpTOCNode Title="postMessage Method (Message)" Url="html/619dc398-231c-0338-3091-390df64a9bdc.htm" />
+          <HelpTOCNode Title="postMessage Method (List(Message))" Url="html/58e56dfb-7dab-2aa3-9bc7-72a2138eb24d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="releaseClaim Method " Url="html/de695ea5-d7a8-eddc-eccd-0e1d6fad3c10.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/26622bcc-4ac6-a048-b435-7035c55dfba0.htm" />
+        <HelpTOCNode Title="updateStats Method " Url="html/f5d6db69-5eac-e56b-f516-9b5bfd30221d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6f4b78f5-bb51-4430-b772-ae54133249fc" Title="Queue Properties" Url="html/50576949-765c-fdd0-a3f1-18a16b7e17f8.htm">
+        <HelpTOCNode Title="Name Property " Url="html/ad031b19-e64a-cd1a-fa73-281a74f8abba.htm" />
+        <HelpTOCNode Title="Stats Property " Url="html/17f0164f-d1d1-c385-a0a5-133964c7386c.htm" />
+        <HelpTOCNode Title="Uri Property " Url="html/1e89a2a0-3f0c-b978-544a-aebed9226027.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="265676e1-dbaf-4c60-bbb6-21f135999db0" Title="QueueStats Class" Url="html/01d905da-0d20-cbb5-3a35-93056a7281b3.htm">
+      <HelpTOCNode Title="QueueStats Members" Url="html/04de93fa-4c1c-a484-0826-6950af7b84a3.htm" />
+      <HelpTOCNode Title="QueueStats Constructor " Url="html/1a935381-ec72-b9ae-f4b1-666136ade2e9.htm" />
+      <HelpTOCNode Title="QueueStats Methods" Url="html/d0ab89ec-6b51-4aba-b517-3a41c84a0cd7.htm" />
+      <HelpTOCNode Id="8cdd779b-e16f-46a1-8c0b-e9dd202d4065" Title="QueueStats Properties" Url="html/4b4549d3-77af-3c2a-a9fa-4f0126104b88.htm">
+        <HelpTOCNode Title="Messages Property " Url="html/bc04f527-bee7-e22e-115b-9ab4922bc82f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6847d0d7-922b-47bc-b98a-03a42b13c20e" Title="Shard Class" Url="html/1c2c4366-1c91-070e-5084-cbcab7d3e27a.htm">
+      <HelpTOCNode Title="Shard Members" Url="html/627dd535-5a0e-60c6-0c3d-cc06cb4e4117.htm" />
+      <HelpTOCNode Id="5c6f5f52-d16e-4640-a89c-0128326d990e" Title="Shard Methods" Url="html/c4d81e48-5676-da15-7ce3-cad51ba49e9c.htm">
+        <HelpTOCNode Title="changeOptions Method " Url="html/c12104f8-1c31-e174-9c92-7ff9bdfe5785.htm" />
+        <HelpTOCNode Title="changeUri Method " Url="html/d2fb7a7d-f03c-cd47-5500-e2a149148926.htm" />
+        <HelpTOCNode Title="changeWeight Method " Url="html/02bb1f0c-b701-36b6-4e6a-cb99dcf2387f.htm" />
+        <HelpTOCNode Title="Create Method " Url="html/ed0e3395-afc3-8fb5-a2be-57a03546ccb0.htm" />
+        <HelpTOCNode Title="deleteShard Method " Url="html/10cdb1a6-2ec6-b377-d576-bcda98d35b3a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b5295503-810d-4a26-96a3-c72c9e7eecc5" Title="Shard Properties" Url="html/f744b1d1-5297-9aa7-2c17-918417b0b37b.htm">
+        <HelpTOCNode Title="Name Property " Url="html/8c0cbc4a-acca-7a4c-7f15-a00c32a5d567.htm" />
+        <HelpTOCNode Title="Options Property " Url="html/cb4f1c26-5e4d-4db2-f7dc-c36b660e2f7f.htm" />
+        <HelpTOCNode Title="Uri Property " Url="html/13d5a9fe-816f-8f54-2c8d-5f83f083fcc3.htm" />
+        <HelpTOCNode Title="Weight Property " Url="html/b4022baf-b54b-7f17-88d8-ef64edc41cb1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

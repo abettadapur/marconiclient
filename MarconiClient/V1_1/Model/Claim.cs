@@ -8,16 +8,46 @@ using System.Web;
 
 namespace MarconiClient.V1_1.Model
 {
+    /// <summary>
+    /// Object representing a claim. Contains the claim ID and the message associated with that id
+    /// </summary>
     public class Claim
     {
-        public Message Message { get; set; }
-        public string ClaimID { get; set; }
+        private string _id;
+        private Message _message;
 
-        public Claim(Message message, string id)
+        /// <summary>
+        /// Gets the message associated with the claim.
+        /// </summary>
+        /// <value>
+        /// The message associated with the claim.
+        /// </value>
+        public Message Message { get { return _message; } }
+
+        /// <summary>
+        /// Returns the claim Id for the claim
+        /// </summary>
+        /// <value>
+        /// The claim Id for the claim
+        /// </value>
+        public string ClaimID { get { return _id; } }
+
+        /// <summary>
+        /// Creates a new claim
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="id">The claim id.</param>
+        internal Claim(Message message, string id)
         {
-            Message = message;
-            ClaimID = id;
+            _message = message;
+            _id = id;
         }
+
+        /// <summary>
+        /// Creates a new claim from a json object
+        /// </summary>
+        /// <param name="jsonObj">The json object to create the claim from</param>
+        /// <returns>The created claim object</returns>
         public static Claim Create(JObject jsonObj)
         {
             string strTargetString = @"" + jsonObj["href"].ToString();

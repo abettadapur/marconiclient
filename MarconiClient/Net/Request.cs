@@ -6,27 +6,35 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarconiClient
+namespace MarconiClient.Net
 {
-    class Request
+    /// <summary>
+    /// Default HTTP request handler for marconi requests.
+    /// </summary>
+    public class MarconiRequest : MarconiClient.Net.IRequest
     {
-        public string ClientId { get; set; }
+        private string _clientid;
+        public string ClientId { get { return _clientid; } set { _clientid = value; } }
         private WebRequestHandler handler;
         private HttpClient client;
-        private static Request instance;
+        private static MarconiRequest instance;
 
-        private Request()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MarconiRequest"/> class.
+        /// </summary>
+        public MarconiRequest()
         {
             handler = new WebRequestHandler();
             client = new HttpClient();
         }
-        public static Request getInstance()
-        {
-            if (instance == null)
-                instance = new Request();
-            return instance;
-        }
 
+        /// <summary>
+        /// Performs a get request
+        /// </summary>
+        /// <param name="uri">The URI.</param>
+        /// <returns>
+        /// HttpResponseMessage
+        /// </returns>
         public async Task<HttpResponseMessage> get(string uri)
         {
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, uri);
@@ -34,13 +42,33 @@ namespace MarconiClient
             HttpResponseMessage response = await client.SendAsync(request);
             return response;
         }
-        public async Task<HttpResponseMessage> put(string uri)
+        /// <summary>
+        /// Performs a put request
+        /// </summary>
+        /// <param name="uri">The URI.</param>
+        /// <param name="body">The body.</param>
+        /// <returns>
+        /// HttpResponseMessage
+        /// </returns>
+        public async Task<HttpResponseMessage> put(string uri, string body)
         {
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Put, uri);
             request.Headers.Add("Client-ID", ClientId);
+            if(body!=null&&body!="")
+            {
+                request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+            }
             HttpResponseMessage response = await client.SendAsync(request);
             return response;
         }
+        /// <summary>
+        /// Performs a post request
+        /// </summary>
+        /// <param name="uri">The URI.</param>
+        /// <param name="body">The body.</param>
+        /// <returns>
+        /// HttpResponseMessage
+        /// </returns>
         public async Task<HttpResponseMessage> post(string uri, string body)
         {
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, uri);
@@ -49,6 +77,13 @@ namespace MarconiClient
             HttpResponseMessage response = await client.SendAsync(request);
             return response;
         }
+        /// <summary>
+        /// Performs a delete request
+        /// </summary>
+        /// <param name="uri">The URI.</param>
+        /// <returns>
+        /// HttpResponseMessage
+        /// </returns>
         public async Task<HttpResponseMessage> delete(string uri)
         {
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Delete, uri);
@@ -56,6 +91,14 @@ namespace MarconiClient
             HttpResponseMessage response = await client.SendAsync(request);
             return response;
         }
+        /// <summary>
+        /// Performs a patch request
+        /// </summary>
+        /// <param name="uri">The URI.</param>
+        /// <param name="body">The body of the request</param>
+        /// <returns>
+        /// HttpResponseMessage
+        /// </returns>
         public async Task<HttpResponseMessage> patch(string uri, string body)
         {
             HttpRequestMessage request = new HttpRequestMessage(new HttpMethod("PATCH"), uri);

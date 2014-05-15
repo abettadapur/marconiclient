@@ -7,7 +7,7 @@
     <ProjectGuid>{ADB4BD92-738F-4E48-8C74-88C97AFD4169}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MarconiClient</RootNamespace>
+    <RootNamespace>MarconiClient.Net</RootNamespace>
     <AssemblyName>MarconiClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MarconiClient.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,12 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Net\IRequest.cs" />
     <Compile Include="Util\QueueDeletedException.cs" />
     <Compile Include="Util\RawJsonConverter.cs" />
+    <Compile Include="Util\Util.cs" />
     <Compile Include="V1\Client.cs" />
     <Compile Include="V1\Model\Claim.cs" />
     <Compile Include="V1\Model\Message.cs" />
-    <Compile Include="V1\Model\MessageBody.cs" />
     <Compile Include="V1\Model\Queue.cs" />
     <Compile Include="V1\Model\QueueStats.cs" />
     <Compile Include="Net\Request.cs" />
@@ -65,9 +67,9 @@
     <Compile Include="V1_1\Client.cs" />
     <Compile Include="V1_1\Model\Claim.cs" />
     <Compile Include="V1_1\Model\Message.cs" />
-    <Compile Include="V1_1\Model\MessageBody.cs" />
     <Compile Include="V1_1\Model\Queue.cs" />
     <Compile Include="V1_1\Model\QueueStats.cs" />
+    <Compile Include="V1_1\Model\Shard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
