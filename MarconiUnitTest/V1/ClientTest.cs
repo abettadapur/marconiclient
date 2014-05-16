@@ -14,7 +14,7 @@ using MarconiClient.V1.Model;
 namespace MarconiUnitTest.V1
 {
     [TestClass]
-    public class ClientTest
+    public class ClientTestV1
     {
         [TestMethod]
         public async Task createQueue()

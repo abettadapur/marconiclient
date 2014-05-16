@@ -58,6 +58,7 @@
     <Compile Include="Util\RawJsonConverter.cs" />
     <Compile Include="Util\Util.cs" />
     <Compile Include="V1\Client.cs" />
+    <Compile Include="V1\Const.cs" />
     <Compile Include="V1\Model\Claim.cs" />
     <Compile Include="V1\Model\Message.cs" />
     <Compile Include="V1\Model\Queue.cs" />

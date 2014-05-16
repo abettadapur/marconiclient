@@ -12,8 +12,12 @@ namespace MarconiClient.V1.Model
     /// <summary>
     /// Object that represents a message that can be posted to a queue
     /// </summary>
+    /// 
+
     public class Message
     {
+        public const string MESSAGE_HREF_REGEX = @"^/[a-z0-9]*/queues/[a-zA-Z0-9_\-]*/messages/([a-zA-Z0-9_\-]*)";
+
         private int _ttl;
         private string _body;
         private string _id;
@@ -105,7 +109,7 @@ namespace MarconiClient.V1.Model
             int.TryParse(jsonObj["ttl"].ToString(), out ttl);
             messageObj._age = age;
             messageObj.TTL = ttl;
-            string strRegex = @"^/[a-z0-9]*/queues/[a-zA-Z0-9\-]*/messages/([a-zA-Z0-9]*)";
+            string strRegex = MESSAGE_HREF_REGEX;
             Regex myRegex = new Regex(strRegex, RegexOptions.None);
             string strTargetString = @"" + jsonObj["href"].ToString();
             messageObj._id = myRegex.Split(strTargetString)[1];

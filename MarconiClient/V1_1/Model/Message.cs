@@ -47,7 +47,7 @@ namespace MarconiClient.V1_1.Model
         /// The id of the message.
         /// </value>
         [JsonIgnore]
-        public string ID { get { return _id; } set { value = _id; } }
+        public string ID { get { return _id; } set { _id = value; } }
 
 
         /// <summary>

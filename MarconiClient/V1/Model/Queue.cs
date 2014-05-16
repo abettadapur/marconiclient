@@ -146,7 +146,7 @@ namespace MarconiClient.V1.Model
                 foreach (var item in jsonObj["resources"])
                 {
                     Message m = messages[counter++];
-                    string strRegex = @"^/[a-z0-9]*/queues/[a-zA-Z0-9]*/messages/([a-zA-Z0-9]*)";
+                    string strRegex = Message.MESSAGE_HREF_REGEX;
                     Regex myRegex = new Regex(strRegex, RegexOptions.None);
                     string strTargetString = @"" + item;
                     m.ID = myRegex.Split(strTargetString)[1];

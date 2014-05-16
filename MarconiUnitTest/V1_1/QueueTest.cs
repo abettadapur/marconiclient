@@ -1,7 +1,7 @@
 ﻿using System;
 using Moq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MarconiClient.V1.Model;
+using MarconiClient.V1_1.Model;
 using MarconiClient.Net;
 using System.Net.Http;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 namespace MarconiUnitTest.V1_1
 {
     [TestClass]
-    public class QueueTest
+    public class QueueTestV1_1
     {
         [TestMethod]
         public void updateStats()
@@ -47,38 +47,8 @@ namespace MarconiUnitTest.V1_1
             mock.Verify(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats"), Times.Once);
         }
 
-        [TestMethod]
-        public async Task setMetadata()
-        {
-            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-            var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata",It.IsAny<string>())).Returns(Task.FromResult(response));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
-
-            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
-            await queue.setMetadata("Metadata");
-
-            mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata", It.IsAny<string>()), Times.Once);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(HttpException))]
-        public async Task setMetadataNegative()
-        {
-            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-            HttpResponseMessage badresponse = new HttpResponseMessage(System.Net.HttpStatusCode.NotFound);
-            var mock = new Mock<IRequest>();
-            mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata", It.IsAny<string>())).Returns(Task.FromResult(badresponse));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
-            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
-
-            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
-            await queue.setMetadata("Metadata");
-
-            mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/metadata", It.IsAny<string>()), Times.Once);
-        }
-
+ 
+      
         [TestMethod]
         public async Task getMetadata()
         {
@@ -124,8 +94,7 @@ namespace MarconiUnitTest.V1_1
         public async Task postSingleMessage()
         {
             Dictionary<string, object> responsebody = new Dictionary<string,object>();
-            responsebody["partial"] = false;
-            responsebody["resources"] = new string[]{"/v1/queues/newQueue/messages/31"};
+            responsebody["links"] = new List<Dictionary<string, object>>() { new Dictionary<string, object> { { "href", "messages/50b68a50d6f5b8c8a7c62b01" }, { "rel", "rel/message" } } };
             string responsestr = JsonConvert.SerializeObject(responsebody);
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
@@ -143,7 +112,7 @@ namespace MarconiUnitTest.V1_1
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             await queue.postMessage(message);
 
-            Assert.AreEqual(message.ID, "31");
+            Assert.AreEqual(message.ID, "50b68a50d6f5b8c8a7c62b01");
             mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/messages", It.IsAny<string>()), Times.Once);
 
 
@@ -152,8 +121,20 @@ namespace MarconiUnitTest.V1_1
         public async Task postMultipleMessages()
         {
             Dictionary<string, object> responsebody = new Dictionary<string, object>();
-            responsebody["partial"] = false;
-            responsebody["resources"] = new string[] { "/v1/queues/newQueue/messages/31", "/v1/queues/newQueue/messages/32" };
+            List<Dictionary<string, object>> links = new List<Dictionary<string, object>>()
+            {
+                new Dictionary<string, object>()
+                {
+                    {"rel","rel/message"},
+                    {"href", "messages/50b68a50d6f5b8c8a7c62b01"}
+                },
+                new Dictionary<string, object>()
+                {
+                    {"rel","rel/message"},
+                    {"href","messages/50b68a50d6f5b8c8a7c62b05"}
+                }
+            };
+            responsebody["links"] = links;
             string responsestr = JsonConvert.SerializeObject(responsebody);
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
@@ -173,8 +154,8 @@ namespace MarconiUnitTest.V1_1
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             await queue.postMessage(messages);
 
-            Assert.AreEqual(message.ID, "31");
-            Assert.AreEqual(message2.ID, "32");
+            Assert.AreEqual(message.ID, "50b68a50d6f5b8c8a7c62b01");
+            Assert.AreEqual(message2.ID, "50b68a50d6f5b8c8a7c62b05");
             mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/messages", It.IsAny<string>()), Times.Once);
         }
 
@@ -186,7 +167,8 @@ namespace MarconiUnitTest.V1_1
 
             JObject jsonobj = JObject.Parse(JsonConvert.SerializeObject(message));
             jsonobj["age"] = 60;
-            jsonobj["href"] = "/v1/queues/newQueue/messages/31";
+            jsonobj["href"] = "messages/50b68a50d6f5b8c8a7c62b01";
+            jsonobj["id"] = "50b68a50d6f5b8c8a7c62b01";
             string jsonstr = jsonobj.ToString();
 
             response.Content = new StringContent(jsonstr);
@@ -199,7 +181,7 @@ namespace MarconiUnitTest.V1_1
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue",mock.Object);
             Message m = await queue.getMessage("31");
 
-            Assert.AreEqual(m.ID, "31");
+            Assert.AreEqual(m.ID, "50b68a50d6f5b8c8a7c62b01");
             
             string originalbody = message.Body;
             string newbody = m.Body;
@@ -215,14 +197,17 @@ namespace MarconiUnitTest.V1_1
         public async Task getMessages()
         {
             List<Dictionary<string, object>> responsebody = new List<Dictionary<string, object>>();
+           
             Dictionary<string, object> firstMessage = new Dictionary<string,object>();
-            firstMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["href"] = "messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["id"] = "50b68a50d6f5b8c8a7c62b01";
             firstMessage["ttl"] = 800;
             firstMessage["age"] = 32;
             firstMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeVideo" }, { "jobid", 58229 } };
 
             Dictionary<string, object> secondMessage = new Dictionary<string, object>();
-            secondMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b02";
+            secondMessage["href"] = "messages/50b68a50d6f5b8c8a7c62b02";
+            secondMessage["id"] = "50b68a50d6f5b8c8a7c62b02";
             secondMessage["ttl"] = 800;
             secondMessage["age"] = 32;
             secondMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeAudio" }, { "jobid", 58230 } };
@@ -254,14 +239,17 @@ namespace MarconiUnitTest.V1_1
         public async Task getMessagesMarker()
         {
             Dictionary<string, object> responsebody = new Dictionary<string, object>();
+           
             List<Dictionary<string, object>> links = new List<Dictionary<string, object>>();
             Dictionary<string, object> link = new Dictionary<string, object>();
             link["rel"] = "next";
-            link["href"] = "/v1/queues/fizbit/messages?marker=6244-244224-783&limit=10";
+            link["href"] = "messages?marker=6244-244224-783&limit=10";
             links.Add(link);
+           
             List<Dictionary<string, object>> messages = new List<Dictionary<string, object>>();
             Dictionary<string, object> firstMessage = new Dictionary<string, object>();
-            firstMessage["href"] = "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["href"] = "messages/50b68a50d6f5b8c8a7c62b01";
+            firstMessage["id"] = "50b68a50d6f5b8c8a7c62b01";
             firstMessage["ttl"] = 800;
             firstMessage["age"] = 32;
             firstMessage["body"] = new Dictionary<string, object>() { { "cmd", "EncodeVideo" }, { "jobid", 58229 } };
@@ -388,19 +376,56 @@ namespace MarconiUnitTest.V1_1
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
 
-            List<Dictionary<string, object>> claimresponse = new List<Dictionary<string, object>>();
-            Dictionary<string, object> firstClaim = new Dictionary<string, object>();
-            firstClaim["href"] = "/v1/queues/foo-bar/messages/50b68a50d6f5b8c8a7c62b01?claim_id=a28ee94e-6cb4-11e2-b4d5-7703267a7926";
-            firstClaim["ttl"] = 800;
-            firstClaim["age"] = 100;
-            firstClaim["body"] = "body";
-            claimresponse.Add(firstClaim);
-            Dictionary<string, object> secondClaim = new Dictionary<string, object>();
-            secondClaim["href"] = "/v1/queues/foo-bar/messages/50b68a50d6f5b8c8a7c62b02?claim_id=a28ee94e-6cb4-11e2-b4d5-7703267a7926";
-            secondClaim["ttl"] = 800;
-            secondClaim["age"] = 790;
-            secondClaim["body"] = "body2";
-            claimresponse.Add(secondClaim);
+            Dictionary<string, object> claimresponse = new Dictionary<string, object>()
+            {
+                {
+                    "messages", new List<Dictionary<string, object>>()
+                    {
+                        new Dictionary<string, object>()
+                        {
+                            {"href","/v1.1/queues/fizbit/messages/50b68a50d6f5b8c8a7c62b01?claim_id=a28ee94e-6cb4-11e2-b4d5-7703267a7926"},
+                            {"id","50b68a50d6f5b8c8a7c62b01"},
+                            {"ttl",800},
+                            {"age",100},
+                            {
+                                "claim", new Dictionary<string, object>()
+                                {
+                                    {"id","a28ee94e-6cb4-11e2-b4d5-7703267a7926"},
+                                    {"client-id", "2d21ebb4-6747-11e3-89d1-43d6a24410d2"}
+                                }
+                            },
+                            {
+                                "body", new Dictionary<string, object>()
+                                {
+                                    {"object_id", "8a50d6"},
+                                    {"target","h.264"}
+                                }
+                            }
+                        },
+                        new Dictionary<string, object>()
+                        {
+                            {"href","/v1.1/queues/fizbit/messages/50b68a50d6f5b8c8a7c62b02?claim_id=a28ee94e-6cb4-11e2-b4d5-7703267a7926"},
+                            {"id","50b68a50d6f5b8c8a7c62b02"},
+                            {"ttl",800},
+                            {"age",790},
+                            {
+                                "claim", new Dictionary<string, object>()
+                                {
+                                    {"id","a28ee94e-6cb4-11e2-b4d5-7703267a7926"},
+                                    {"client-id", "2d21ebb4-6747-11e3-89d1-43d6a24410d2"}
+                                }
+                            },
+                            {
+                                "body", new Dictionary<string, object>()
+                                {
+                                    {"object_id", "8a50d6"},
+                                    {"target","h.264"}
+                                }
+                            }
+                        }
+                    }
+                }
+            };
 
             string responsestr = JsonConvert.SerializeObject(claimresponse);
 
@@ -415,9 +440,7 @@ namespace MarconiUnitTest.V1_1
             List<Claim> claims = await queue.claim(300, 300, 10);
 
             Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claims[0].ClaimID);
-            Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claims[1].ClaimID);
-            Assert.AreEqual("body", claims[0].Message.Body);
-            Assert.AreEqual("body2", claims[1].Message.Body);
+            Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claims[1].ClaimID);    
             Assert.AreEqual(800, claims[0].Message.TTL);
             Assert.AreEqual(790, claims[1].Message.Age);
             Assert.AreEqual("50b68a50d6f5b8c8a7c62b01", claims[0].Message.ID);

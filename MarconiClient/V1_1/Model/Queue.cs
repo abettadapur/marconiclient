@@ -63,6 +63,8 @@ namespace MarconiClient.V1_1.Model
             if (await CheckExist())
             {
                 HttpResponseMessage response = await request.get(Uri + "/stats");
+                if (!response.IsSuccessStatusCode)
+                    await Util.Util.throwException(response);
                 string json = await response.Content.ReadAsStringAsync();
                 _Stats = JsonConvert.DeserializeObject<QueueStats>(json);
             }
@@ -128,7 +130,8 @@ namespace MarconiClient.V1_1.Model
                 foreach (var item in jsonObj["links"])
                 {
                     Message m = messages[counter++];
-                    string strRegex = @"^messages/([a-zA-Z0-9]*)";
+                    
+                    string strRegex = @"^messages/([a-zA-Z0-9_\-]*)";
                     Regex myRegex = new Regex(strRegex, RegexOptions.None);
                     string strTargetString = @"" + item["href"].ToString();
                     m.ID = myRegex.Split(strTargetString)[1];
@@ -358,13 +361,15 @@ namespace MarconiClient.V1_1.Model
                 string jsonbody = JsonConvert.SerializeObject(claimPostBody);
                 HttpResponseMessage response = await request.post(Uri + "/claims?limit=" + limit, jsonbody);
                 string json = await response.Content.ReadAsStringAsync();
-                Console.Out.WriteLine(json);
+                
                 if (!response.IsSuccessStatusCode)
                     await Util.Util.throwException(response);
+                
                 if (response.StatusCode != System.Net.HttpStatusCode.NoContent)
                 {
                     JObject jsonArr = JObject.Parse(json);
                     List<Claim> claims = new List<Claim>();
+                    
                     foreach (JObject jsonObj in jsonArr["messages"])
                     {
                         claims.Add(Claim.Create(jsonObj));

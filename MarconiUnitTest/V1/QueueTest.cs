@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 namespace MarconiUnitTest.V1
 {
     [TestClass]
-    public class QueueTest
+    public class QueueTestV1
     {
         [TestMethod]
         public void updateStats()
@@ -125,7 +125,7 @@ namespace MarconiUnitTest.V1
         {
             Dictionary<string, object> responsebody = new Dictionary<string,object>();
             responsebody["partial"] = false;
-            responsebody["resources"] = new string[]{"/v1/queues/newQueue/messages/31"};
+            responsebody["resources"] = new string[] { "/v1/queues/newQueue/messages/6c472447-f7f4-4bc6-8886-6a6de579daf2" };
             string responsestr = JsonConvert.SerializeObject(responsebody);
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
@@ -143,7 +143,7 @@ namespace MarconiUnitTest.V1
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
             await queue.postMessage(message);
 
-            Assert.AreEqual(message.ID, "31");
+            Assert.AreEqual(message.ID, "6c472447-f7f4-4bc6-8886-6a6de579daf2");
             mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/messages", It.IsAny<string>()), Times.Once);
 
 

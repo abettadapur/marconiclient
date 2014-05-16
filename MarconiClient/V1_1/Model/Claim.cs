@@ -50,9 +50,7 @@ namespace MarconiClient.V1_1.Model
         /// <returns>The created claim object</returns>
         public static Claim Create(JObject jsonObj)
         {
-            string strTargetString = @"" + jsonObj["href"].ToString();
-            var parsedQuery = HttpUtility.ParseQueryString(strTargetString.Split('?')[1]);
-            string claimid = parsedQuery["claim_id"];
+            string claimid = jsonObj["claim"]["id"].ToString();
             return new Claim(Message.Create(jsonObj), claimid);
         }
 

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace MarconiUnitTest.V1_1
 {
     [TestClass]
-    public class ClientTest
+    public class ClientTestV1_1
     {
         [TestMethod]
         public async Task createQueue()
