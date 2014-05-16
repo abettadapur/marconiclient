@@ -14,7 +14,7 @@ namespace MarconiClient.V1_1.Model
     public class Claim
     {
         private string _id;
-        private Message _message;
+        private List<Message> _messages;
 
         /// <summary>
         /// Gets the message associated with the claim.
@@ -22,7 +22,7 @@ namespace MarconiClient.V1_1.Model
         /// <value>
         /// The message associated with the claim.
         /// </value>
-        public Message Message { get { return _message; } }
+        public List<Message> Messages { get { return _messages; } }
 
         /// <summary>
         /// Returns the claim Id for the claim
@@ -37,9 +37,9 @@ namespace MarconiClient.V1_1.Model
         /// </summary>
         /// <param name="message">The message.</param>
         /// <param name="id">The claim id.</param>
-        internal Claim(Message message, string id)
+        internal Claim(List<Message> messages, string id)
         {
-            _message = message;
+            _messages = messages;
             _id = id;
         }
 
@@ -48,11 +48,11 @@ namespace MarconiClient.V1_1.Model
         /// </summary>
         /// <param name="jsonObj">The json object to create the claim from</param>
         /// <returns>The created claim object</returns>
-        public static Claim Create(JObject jsonObj)
+        /*public static Claim Create(JObject jsonObj)
         {
             string claimid = jsonObj["claim"]["id"].ToString();
             return new Claim(Message.Create(jsonObj), claimid);
-        }
+        }*/
 
     }
 }

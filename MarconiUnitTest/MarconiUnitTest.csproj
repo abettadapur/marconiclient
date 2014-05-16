@@ -72,6 +72,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="V1_1\ClientTest.cs" />
     <Compile Include="V1_1\QueueTest.cs" />
+    <Compile Include="V1_1\ShardTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarconiClient\MarconiClient.csproj">

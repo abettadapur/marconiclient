@@ -12,12 +12,13 @@ using System.Threading.Tasks;
 using MarconiClient.Util;
 using MarconiClient.Net;
 using System.Runtime.CompilerServices;
+using System.Collections;
 
 #if DEBUG
 [assembly: InternalsVisibleTo("MarconiUnitTest")]
 #endif
 
-namespace MarconiClient.V1.Model
+namespace MarconiClient.V1.Model 
 {
     /// <summary>
     /// The Queue object contains all the methods that can be performed on queues, including message reading, creation, and claiming.
@@ -371,7 +372,7 @@ namespace MarconiClient.V1.Model
         /// <param name="ttl">The TTL of the claim. Once this and the grace expire, the claim will automatically release</param>
         /// <param name="grace">The grace period of the claim</param>
         /// <returns>A list of claim objects that contain messages</returns>
-        public async Task<List<Claim>> claim(int ttl, int grace)
+        public async Task<Claim> claim(int ttl, int grace)
         {
             return await claim(ttl, grace, 10);
         }
@@ -384,7 +385,7 @@ namespace MarconiClient.V1.Model
         /// <param name="limit">How many messages to claim.</param>
         /// <returns>A list of claim objects that contain messages</returns>
         /// <exception cref="QueueMissingException"></exception>
-        public async Task<List<Claim>> claim(int ttl, int grace, int limit)
+        public async Task<Claim> claim(int ttl, int grace, int limit)
         {
             if (await CheckExist())
             {
@@ -401,12 +402,21 @@ namespace MarconiClient.V1.Model
                 {
                     string json = await response.Content.ReadAsStringAsync();
                     JArray jsonArr = JArray.Parse(json);
-                    List<Claim> claims = new List<Claim>();
+                    List<Message> messages = new List<Message>();
+                    string claimid = "";
                     foreach (JObject jsonObj in jsonArr)
                     {
-                        claims.Add(Claim.Create(jsonObj));
+                        //claims.Add(Claim.Create(jsonObj));
+                        messages.Add(Message.Create(jsonObj));
+                        
+                        if (claimid == "")
+                        {
+                            string strTargetString = @"" + jsonObj["href"].ToString();
+                            var parsedQuery = HttpUtility.ParseQueryString(strTargetString.Split('?')[1]);
+                            claimid = parsedQuery["claim_id"];
+                        }
                     }
-                    return claims;
+                    return new Claim(messages, claimid);
                 }
                 return null;
             }
@@ -458,8 +468,6 @@ namespace MarconiClient.V1.Model
                 throw new QueueMissingException();
 
         }
-  
-
     }   
     
 }

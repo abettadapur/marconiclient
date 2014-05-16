@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using MarconiClient.Net;
 using MarconiClient.Util;
 using System.Runtime.CompilerServices;
+using System.Collections;
 
 #if DEBUG
 [assembly: InternalsVisibleTo("MarconiUnitTest")]
@@ -21,9 +22,9 @@ namespace MarconiClient.V1_1.Model
     /// <summary>
     /// The Queue object contains all the methods that can be performed on queues, including message reading, creation, and claiming.
     /// </summary>
-    public class Queue
+    public class Queue 
     {
-
+        private string currentMarker = "";
         private string _name;
         private string _uri;
         private bool Exists = false;
@@ -335,7 +336,7 @@ namespace MarconiClient.V1_1.Model
         /// <param name="ttl">The TTL of the claim. Once this and the grace expire, the claim will automatically release</param>
         /// <param name="grace">The grace period of the claim</param>
         /// <returns>A list of claim objects that contain messages</returns>
-        public async Task<List<Claim>> claim(int ttl, int grace)
+        public async Task<Claim> claim(int ttl, int grace)
         {
             return await claim(ttl, grace, 10);
         }
@@ -349,7 +350,7 @@ namespace MarconiClient.V1_1.Model
         /// <param name="limit">How many messages to claim.</param>
         /// <returns>A list of claim objects that contain messages</returns>
         /// <exception cref="QueueMissingException"></exception>
-        public async Task<List<Claim>> claim(int ttl, int grace, int limit)
+        public async Task<Claim> claim(int ttl, int grace, int limit)
         {
             if (await CheckExist())
             {
@@ -368,22 +369,22 @@ namespace MarconiClient.V1_1.Model
                 if (response.StatusCode != System.Net.HttpStatusCode.NoContent)
                 {
                     JObject jsonArr = JObject.Parse(json);
-                    List<Claim> claims = new List<Claim>();
-                    
+                    List<Message> messages = new List<Message>();
+
+                    string claimid = "";
                     foreach (JObject jsonObj in jsonArr["messages"])
                     {
-                        claims.Add(Claim.Create(jsonObj));
-                    }
-                    return claims;
+                        messages.Add(Message.Create(jsonObj));
+                        if (claimid == "")
+                            claimid = jsonObj["claim"]["id"].ToString();
+                    }      
+
+                    return new Claim(messages, claimid);
                 }
                 return null;
             }
             else
                 throw new QueueMissingException();
-        }
-        public async Task<Claim> getClaim(string claimid)
-        {
-            return null;  ///needs some thought
         }
         /// <summary>
         /// Updates the claim with a new TTL.
@@ -466,8 +467,10 @@ namespace MarconiClient.V1_1.Model
                 ExistCheck = 0;
             return Exists;
         }
-  
 
+
+
+        
     }   
     
 }

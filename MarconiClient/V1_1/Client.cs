@@ -94,7 +94,7 @@ namespace MarconiClient.V1_1
             JObject jobj = JObject.Parse(json);
             foreach (var queue in jobj["queues"])
             {
-                Queue newQueue = new Queue(queue["name"].ToString(), Host + ":" + Port + queue["href"].ToString(), request);
+                Queue newQueue = new Queue(queue["name"].ToString(), Host + ":" + Port +"/"+Version+"/"+ queue["href"].ToString(), request);
                 queues.Add(newQueue);
             }
 
@@ -131,7 +131,6 @@ namespace MarconiClient.V1_1
 
             string bodystr = JsonConvert.SerializeObject(body);
             HttpResponseMessage response = await request.put(url + "/shards/" + name, bodystr);
-            Console.Out.WriteLine(await response.Content.ReadAsStringAsync());
             if (!response.IsSuccessStatusCode)
                 await Util.Util.throwException(response);
             Shard s = new Shard(name, location, weight, options, url+"/shards/"+name,request);

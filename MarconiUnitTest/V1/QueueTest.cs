@@ -412,16 +412,15 @@ namespace MarconiUnitTest.V1
             mock.Setup(foo => foo.post("http://localhost:200/v1/queues/newQueue/claims?limit=10", jsonbody)).Returns(Task.FromResult(response));
 
             Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
-            List<Claim> claims = await queue.claim(300, 300, 10);
+            Claim claim = await queue.claim(300, 300, 10);
 
-            Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claims[0].ClaimID);
-            Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claims[1].ClaimID);
-            Assert.AreEqual("body", claims[0].Message.Body);
-            Assert.AreEqual("body2", claims[1].Message.Body);
-            Assert.AreEqual(800, claims[0].Message.TTL);
-            Assert.AreEqual(790, claims[1].Message.Age);
-            Assert.AreEqual("50b68a50d6f5b8c8a7c62b01", claims[0].Message.ID);
-            Assert.AreEqual("50b68a50d6f5b8c8a7c62b02", claims[1].Message.ID);
+            Assert.AreEqual("a28ee94e-6cb4-11e2-b4d5-7703267a7926", claim.ClaimID);
+            Assert.AreEqual("body", claim.Messages[0].Body);
+            Assert.AreEqual("body2", claim.Messages[1].Body);
+            Assert.AreEqual(800, claim.Messages[0].TTL);
+            Assert.AreEqual(790, claim.Messages[1].Age);
+            Assert.AreEqual("50b68a50d6f5b8c8a7c62b01", claim.Messages[0].ID);
+            Assert.AreEqual("50b68a50d6f5b8c8a7c62b02", claim.Messages[1].ID);
 
             mock.Verify(foo => foo.post("http://localhost:200/v1/queues/newQueue/claims?limit=10", jsonbody), Times.Once);
         }

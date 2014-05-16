@@ -120,47 +120,51 @@ namespace MarconiClient.V1_1.Model
         /// Changes the URI and issues a patch request.
         /// </summary>
         /// <param name="uri">The URI.</param>
-        public async void changeUri(string uri)
+        public async Task changeUri(string uri)
         {
             _uri = uri;
             Dictionary<string, string> body = new Dictionary<string, string>();
             body["uri"] = _uri;
             HttpResponseMessage response = await request.patch(marconi_uri, JsonConvert.SerializeObject(body));
-            response.EnsureSuccessStatusCode();
+            if (!response.IsSuccessStatusCode)
+                await Util.Util.throwException(response);
         }
 
         /// <summary>
         /// Changes the weight and issues a patch request
         /// </summary>
         /// <param name="weight">The weight.</param>
-        public async void changeWeight(int weight)
+        public async Task changeWeight(int weight)
         {
             _weight = weight;
             Dictionary<string, int> body = new Dictionary<string, int>();
             body["weight"] = _weight;
             HttpResponseMessage response = await request.patch(marconi_uri, JsonConvert.SerializeObject(body));
-            response.EnsureSuccessStatusCode();
+            if (!response.IsSuccessStatusCode)
+                await Util.Util.throwException(response);
         }
 
         /// <summary>
         /// Changes the options and issues a patch request
         /// </summary>
         /// <param name="options">The options.</param>
-        public async void changeOptions(object options)
+        public async Task changeOptions(object options)
         {
             _options = JsonConvert.SerializeObject(options);
             HttpResponseMessage response = await request.patch(marconi_uri, JsonConvert.SerializeObject(options));
-            response.EnsureSuccessStatusCode();
+            if (!response.IsSuccessStatusCode)
+                await Util.Util.throwException(response);
 
         }
 
         /// <summary>
         /// Deletes the shard.
         /// </summary>
-        public async void deleteShard()
+        public async Task deleteShard()
         {
             HttpResponseMessage response = await request.delete(marconi_uri);
-            response.EnsureSuccessStatusCode();
+            if (!response.IsSuccessStatusCode)
+                await Util.Util.throwException(response);
         }
 
 

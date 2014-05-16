@@ -42,7 +42,7 @@ namespace MarconiTest
         {
             try
             {
-                Client client = new Client("http://10.5.73.249", 8888, "v1", new MarconiRequest());
+                Client client = new Client("http://10.5.73.239", 8888, "v1", new MarconiRequest());
                 Queue test1 = await client.createQueue("test1");
                 Console.Out.WriteLine("Created " + test1.Name + " at " + test1.Uri);
                 Console.Out.Write("Does it exist....");
@@ -57,7 +57,9 @@ namespace MarconiTest
                 {
                     songMessages.Add(new Message(s));
                 }
-                test1.postMessage(songMessages);
+                await test1.postMessage(songMessages);
+                await test1.updateStats();
+
 
                 List<Message> results = new List<Message>();
                 string marker = "";
@@ -73,19 +75,19 @@ namespace MarconiTest
 
                 } while (results.Count != 0);
 
-                List<Claim> claims = await test1.claim(300, 300);
-                foreach (Claim c in claims)
+                Claim claim = await test1.claim(300, 300);
+                foreach (Message c in claim.Messages)
                 {
-                    Console.Out.Write("Claimed " + c.Message.ID + " with claim id" + c.ClaimID + "....");
-                    await test1.deleteMessage(c.Message.ID, c.ClaimID);
-                    Console.Out.WriteLine("");
+                    Console.Out.Write("Claimed " + c.ID + " with claim id" + claim.ClaimID + "....");
+                    await test1.deleteMessage(c.ID, claim.ClaimID);
+                    Console.Out.WriteLine("true");
                 }
 
                 Console.Out.Write("Deleting test1....");
-                test1.delete();
+                await test1.delete();
                 Console.Out.WriteLine(!await client.isQueueCreated(test1.Name));
                 Console.Out.Write("Deleting test2....");
-                test2.delete();
+                await test2.delete();
                 Console.Out.WriteLine(!await client.isQueueCreated(test2.Name));
             }
             catch(Exception exception)
@@ -100,7 +102,7 @@ namespace MarconiTest
             try
             {
                 MarconiClient.V1_1.Client client = new MarconiClient.V1_1.Client("http://10.5.73.249", 8888, "v1.1", new MarconiRequest());
-                MarconiClient.V1_1.Model.Shard shard = await client.createShard("newShard", "http://127.0.0.1:27017", 100, null);
+                MarconiClient.V1_1.Model.Shard shard = await client.createShard("newShard", "mongodb://127.0.0.1:27017", 100, null);
             }
             catch(HttpException ex)
             {

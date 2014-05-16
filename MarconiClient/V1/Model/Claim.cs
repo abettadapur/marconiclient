@@ -14,14 +14,14 @@ namespace MarconiClient.V1.Model
     public class Claim
     {
         private string _id;
-        private Message _message;
+        private List<Message> _messages;
         /// <summary>
         /// Gets the message associated with the claim.
         /// </summary>
         /// <value>
         /// The message associated with the claim.
         /// </value>
-        public Message Message { get { return _message; } }
+        public List<Message> Messages { get { return _messages; } }
 
         /// <summary>
         /// Returns the claim Id for the claim
@@ -34,11 +34,11 @@ namespace MarconiClient.V1.Model
         /// <summary>
         /// Creates a new claim
         /// </summary>
-        /// <param name="message">The message.</param>
+        /// <param name="messages">The claimed messages.</param>
         /// <param name="id">The claim id.</param>
-        internal Claim(Message message, string id)
+        internal Claim(List<Message> messages, string id)
         {
-            _message = message;
+            _messages = messages;
             _id = id;
         }
 
@@ -47,13 +47,13 @@ namespace MarconiClient.V1.Model
         /// </summary>
         /// <param name="jsonObj">The json object to create the claim from</param>
         /// <returns>The created claim object</returns>
-        public static Claim Create(JObject jsonObj)
+        /*public static Claim Create(JObject jsonObj)
         {
             string strTargetString = @"" + jsonObj["href"].ToString();
             var parsedQuery = HttpUtility.ParseQueryString(strTargetString.Split('?')[1]);
             string claimid = parsedQuery["claim_id"];
             return new Claim(Message.Create(jsonObj), claimid);
-        }
+        }*/
 
     }
 }
