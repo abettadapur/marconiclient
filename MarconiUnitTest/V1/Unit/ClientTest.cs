@@ -12,7 +12,7 @@ using MarconiClient.V1;
 using MarconiClient.V1.Model;
 using Newtonsoft.Json;
 
-namespace MarconiUnitTest.V1
+namespace MarconiUnitTest.Unit.V1
 {
     [TestClass]
     public class ClientTestV1

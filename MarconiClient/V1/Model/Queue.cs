@@ -424,9 +424,20 @@ namespace MarconiClient.V1.Model
                 throw new QueueMissingException();
             
         }
-        public async Task<Claim> getClaim(string claimid)
+       public async Task<Claim> getClaim(string claimid)
         {
-            return null;  ///needs some thought
+            /*if (await CheckExist())
+            {
+                HttpResponseMessage response = await request.get(Uri + "/claims/" + claimid);
+                if (!response.IsSuccessStatusCode)
+                    await Util.Util.throwException(response);
+
+                string json = await response.Content.ReadAsStringAsync();
+
+            }
+            else
+                throw new QueueMissingException();*/
+            throw new NotImplementedException();
         }
 
         /// <summary>

@@ -26,6 +26,7 @@ namespace MarconiClient.Net
         {
             handler = new WebRequestHandler();
             client = new HttpClient();
+            client.Timeout = TimeSpan.FromSeconds(5);
         }
 
         /// <summary>

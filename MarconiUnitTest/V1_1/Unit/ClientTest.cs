@@ -12,7 +12,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarconiUnitTest.V1_1
+namespace MarconiUnitTest.Unit.V1_1
 {
     [TestClass]
     public class ClientTestV1_1

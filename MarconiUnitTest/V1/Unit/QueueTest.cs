@@ -13,7 +13,7 @@ using MarconiClient.Util;
 using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
 
-namespace MarconiUnitTest.V1
+namespace MarconiUnitTest.Unit.V1
 {
     [TestClass]
     public class QueueTestV1

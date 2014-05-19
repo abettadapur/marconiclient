@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
   <HelpKINode Title="Age property">
-    <HelpKINode Title="Message.Age Property " Url="html/7522658e-6ea7-baf7-fe27-03fa7662f35b.htm" />
     <HelpKINode Title="Message.Age Property " Url="html/3fc7a984-8bc1-e0de-1206-627b0a9b918f.htm" />
+    <HelpKINode Title="Message.Age Property " Url="html/7522658e-6ea7-baf7-fe27-03fa7662f35b.htm" />
   </HelpKINode>
   <HelpKINode Title="Body property">
     <HelpKINode Title="Message.Body Property " Url="html/2ad5164f-6032-d1e8-b582-38e65bfa5dee.htm" />
@@ -14,16 +14,16 @@
   <HelpKINode Title="Claim class">
     <HelpKINode Title="Claim Class" Url="html/b2ea14fe-b3b3-9e3b-c868-44413af461de.htm" />
     <HelpKINode Title="Claim Class" Url="html/ec6c3e36-9b82-f497-4427-940a00176ce9.htm" />
-    <HelpKINode Title="Claim Members" Url="html/d4eb5f0e-25ac-07a1-f610-96e66cca92a1.htm" />
     <HelpKINode Title="Claim Members" Url="html/fe517526-80ee-61e3-8cfa-f2e4d209c7bf.htm" />
+    <HelpKINode Title="Claim Members" Url="html/d4eb5f0e-25ac-07a1-f610-96e66cca92a1.htm" />
     <HelpKINode Title="about Claim class" Url="html/b2ea14fe-b3b3-9e3b-c868-44413af461de.htm" />
     <HelpKINode Title="about Claim class" Url="html/ec6c3e36-9b82-f497-4427-940a00176ce9.htm" />
-    <HelpKINode Title="all members" Url="html/d4eb5f0e-25ac-07a1-f610-96e66cca92a1.htm" />
     <HelpKINode Title="all members" Url="html/fe517526-80ee-61e3-8cfa-f2e4d209c7bf.htm" />
+    <HelpKINode Title="all members" Url="html/d4eb5f0e-25ac-07a1-f610-96e66cca92a1.htm" />
     <HelpKINode Title="methods" Url="html/b29d3730-76d4-59a7-a5e8-0e9616468429.htm" />
     <HelpKINode Title="methods" Url="html/cf3368a4-b044-9804-1642-cb6a5e3ae404.htm" />
-    <HelpKINode Title="properties" Url="html/962276ea-c643-3b01-c83d-03a8f5b610a9.htm" />
     <HelpKINode Title="properties" Url="html/3ae9b0c5-17ae-c8c2-a2f9-c9bc669d22b0.htm" />
+    <HelpKINode Title="properties" Url="html/962276ea-c643-3b01-c83d-03a8f5b610a9.htm" />
   </HelpKINode>
   <HelpKINode Title="claim method">
     <HelpKINode Title="Queue.claim Method " Url="html/62b1c6d2-a211-fdc0-ec93-c45cfbfc9889.htm" />
@@ -33,37 +33,33 @@
     <HelpKINode Title="Claim.ClaimID Property " Url="html/9743fe65-1261-1da1-5a5e-1aae80085edd.htm" />
     <HelpKINode Title="Claim.ClaimID Property " Url="html/9ff1b8a2-5e4f-92af-bab3-5f62e333202f.htm" />
   </HelpKINode>
-  <HelpKINode Title="Claim.Create method">
-    <HelpKINode Title="Claim.Create Method " Url="html/56d3612b-9e84-7be2-f504-7980ec41ab35.htm" />
-    <HelpKINode Title="Claim.Create Method " Url="html/217cfde1-2e0a-2f19-d5ec-1290f82cb68b.htm" />
-  </HelpKINode>
-  <HelpKINode Title="Claim.Message property">
-    <HelpKINode Title="Claim.Message Property " Url="html/af5ae2df-fc71-cdae-7592-d3183fc09433.htm" />
-    <HelpKINode Title="Claim.Message Property " Url="html/b7636e72-0f66-da21-34d2-dcd8dfd1166a.htm" />
+  <HelpKINode Title="Claim.Messages property">
+    <HelpKINode Title="Claim.Messages Property " Url="html/6b2d7c0e-f5d2-0e11-0cf4-db2897c65354.htm" />
+    <HelpKINode Title="Claim.Messages Property " Url="html/0e469393-a9f3-b549-a1ca-cb7e0c6236e9.htm" />
   </HelpKINode>
   <HelpKINode Title="Claimed property">
-    <HelpKINode Title="MessageStats.Claimed Property " Url="html/b52e9847-9a86-82c2-5e32-73f4e00c45df.htm" />
     <HelpKINode Title="MessageStats.Claimed Property " Url="html/0effda9b-f1ac-abb1-d8f2-25dcde4eb714.htm" />
+    <HelpKINode Title="MessageStats.Claimed Property " Url="html/b52e9847-9a86-82c2-5e32-73f4e00c45df.htm" />
   </HelpKINode>
   <HelpKINode Title="ClaimID property">
     <HelpKINode Title="Claim.ClaimID Property " Url="html/9ff1b8a2-5e4f-92af-bab3-5f62e333202f.htm" />
     <HelpKINode Title="Claim.ClaimID Property " Url="html/9743fe65-1261-1da1-5a5e-1aae80085edd.htm" />
   </HelpKINode>
   <HelpKINode Title="Client class">
-    <HelpKINode Title="Client Class" Url="html/6d7b8a17-0bc3-8ef4-eb01-1dd75b1a78ec.htm" />
     <HelpKINode Title="Client Class" Url="html/28fe11cd-4d8a-c1d6-fa24-9b939b2aeb52.htm" />
-    <HelpKINode Title="Client Members" Url="html/91837584-abfd-a694-7b01-c4761e0158c0.htm" />
+    <HelpKINode Title="Client Class" Url="html/6d7b8a17-0bc3-8ef4-eb01-1dd75b1a78ec.htm" />
     <HelpKINode Title="Client Members" Url="html/e08eb1b9-7642-034b-d7ae-61d95841b745.htm" />
-    <HelpKINode Title="about Client class" Url="html/6d7b8a17-0bc3-8ef4-eb01-1dd75b1a78ec.htm" />
+    <HelpKINode Title="Client Members" Url="html/91837584-abfd-a694-7b01-c4761e0158c0.htm" />
     <HelpKINode Title="about Client class" Url="html/28fe11cd-4d8a-c1d6-fa24-9b939b2aeb52.htm" />
+    <HelpKINode Title="about Client class" Url="html/6d7b8a17-0bc3-8ef4-eb01-1dd75b1a78ec.htm" />
     <HelpKINode Title="all members" Url="html/91837584-abfd-a694-7b01-c4761e0158c0.htm" />
     <HelpKINode Title="all members" Url="html/e08eb1b9-7642-034b-d7ae-61d95841b745.htm" />
-    <HelpKINode Title="constructor" Url="html/3ae98c06-6f84-abcb-889d-79e735a97a94.htm" />
     <HelpKINode Title="constructor" Url="html/a967f3f1-b363-be79-eff1-08fb17708715.htm" />
+    <HelpKINode Title="constructor" Url="html/3ae98c06-6f84-abcb-889d-79e735a97a94.htm" />
     <HelpKINode Title="methods" Url="html/84dfd0a4-c1b8-9ea8-df3b-601acafd7a3e.htm" />
     <HelpKINode Title="methods" Url="html/b3747157-7cf3-a951-1121-5f3e4415ec2c.htm" />
-    <HelpKINode Title="properties" Url="html/2aa5e5ca-6956-2992-bf5e-be1de61521bd.htm" />
     <HelpKINode Title="properties" Url="html/e78a74cf-38de-b225-2e4b-7ba08f8d0db4.htm" />
+    <HelpKINode Title="properties" Url="html/2aa5e5ca-6956-2992-bf5e-be1de61521bd.htm" />
   </HelpKINode>
   <HelpKINode Title="Client.Client constructor">
     <HelpKINode Title="Client Constructor " Url="html/3ae98c06-6f84-abcb-889d-79e735a97a94.htm" />
@@ -92,23 +88,21 @@
     <HelpKINode Title="Client.Port Property " Url="html/cc36244e-698f-b26c-1207-70452a4bfeb5.htm" />
   </HelpKINode>
   <HelpKINode Title="Client.Version property">
-    <HelpKINode Title="Client.Version Property " Url="html/c3c3934c-2587-53e1-c7b1-4c006be9ee04.htm" />
     <HelpKINode Title="Client.Version Property " Url="html/3e29a5c2-1ff6-de2a-96a5-92a274dea781.htm" />
+    <HelpKINode Title="Client.Version Property " Url="html/c3c3934c-2587-53e1-c7b1-4c006be9ee04.htm" />
   </HelpKINode>
   <HelpKINode Title="ClientId property">
     <HelpKINode Title="IRequest.ClientId Property " Url="html/9acb4929-168e-0fca-0d5a-01990db7fac0.htm" />
     <HelpKINode Title="MarconiRequest.ClientId Property " Url="html/9c9055b4-7f52-f47c-98ce-0afacfd851de.htm" />
   </HelpKINode>
   <HelpKINode Title="Create method">
-    <HelpKINode Title="Claim.Create Method " Url="html/217cfde1-2e0a-2f19-d5ec-1290f82cb68b.htm" />
-    <HelpKINode Title="Claim.Create Method " Url="html/56d3612b-9e84-7be2-f504-7980ec41ab35.htm" />
     <HelpKINode Title="Message.Create Method " Url="html/2c8de6cf-b525-15f4-4b3b-68f4875f4cfd.htm" />
     <HelpKINode Title="Message.Create Method " Url="html/1078a1ce-4cfc-24b1-935b-4478c9dda6dd.htm" />
     <HelpKINode Title="Shard.Create Method " Url="html/ed0e3395-afc3-8fb5-a2be-57a03546ccb0.htm" />
   </HelpKINode>
   <HelpKINode Title="createQueue method">
-    <HelpKINode Title="Client.createQueue Method " Url="html/c20d1b33-e61e-ee66-782c-40cb78144a34.htm" />
     <HelpKINode Title="Client.createQueue Method " Url="html/047b73a0-36b2-79ba-9fe1-01c41e33b08e.htm" />
+    <HelpKINode Title="Client.createQueue Method " Url="html/c20d1b33-e61e-ee66-782c-40cb78144a34.htm" />
   </HelpKINode>
   <HelpKINode Title="createShard method" Url="html/601c3180-97b6-e052-7a21-3f50f52d7a3c.htm" />
   <HelpKINode Title="delete method">
@@ -118,46 +112,43 @@
     <HelpKINode Title="Queue.delete Method " Url="html/2bb82e95-b566-54a9-0b28-8cf2f0c58c74.htm" />
   </HelpKINode>
   <HelpKINode Title="deleteMessage method">
-    <HelpKINode Title="Queue.deleteMessage Method " Url="html/b905c371-10f9-d0d8-7572-f77212b51dce.htm" />
     <HelpKINode Title="Queue.deleteMessage Method " Url="html/55f45d3e-5581-ee9b-efc9-aec95b99f4cc.htm" />
+    <HelpKINode Title="Queue.deleteMessage Method " Url="html/b905c371-10f9-d0d8-7572-f77212b51dce.htm" />
   </HelpKINode>
   <HelpKINode Title="deleteMessages method">
-    <HelpKINode Title="Queue.deleteMessages Method " Url="html/9ff45284-22fb-b3f2-2746-e0eed4aa5a6c.htm" />
     <HelpKINode Title="Queue.deleteMessages Method " Url="html/50d6d26f-cea6-ea26-b7dc-b2eb6e45cd99.htm" />
+    <HelpKINode Title="Queue.deleteMessages Method " Url="html/9ff45284-22fb-b3f2-2746-e0eed4aa5a6c.htm" />
   </HelpKINode>
   <HelpKINode Title="deleteShard method" Url="html/10cdb1a6-2ec6-b377-d576-bcda98d35b3a.htm" />
   <HelpKINode Title="Free property">
-    <HelpKINode Title="MessageStats.Free Property " Url="html/bbeb4157-bc44-19d7-60d0-4d19ddd22f59.htm" />
     <HelpKINode Title="MessageStats.Free Property " Url="html/ef0c3433-217f-ade2-aacc-092290daf558.htm" />
+    <HelpKINode Title="MessageStats.Free Property " Url="html/bbeb4157-bc44-19d7-60d0-4d19ddd22f59.htm" />
   </HelpKINode>
   <HelpKINode Title="get method">
     <HelpKINode Title="IRequest.get Method " Url="html/b2796664-d620-860c-b3a1-4fa5fd8b60d1.htm" />
     <HelpKINode Title="MarconiRequest.get Method " Url="html/8609bc5b-a243-969c-3561-1ae214799e49.htm" />
   </HelpKINode>
-  <HelpKINode Title="getClaim method">
-    <HelpKINode Title="Queue.getClaim Method " Url="html/31aa114d-cda4-933a-f7d7-0ac8a1f67179.htm" />
-    <HelpKINode Title="Queue.getClaim Method " Url="html/9d3b4958-18ab-e94c-a528-cd219f1b0954.htm" />
-  </HelpKINode>
+  <HelpKINode Title="getClaim method" Url="html/31aa114d-cda4-933a-f7d7-0ac8a1f67179.htm" />
   <HelpKINode Title="getMessage method">
     <HelpKINode Title="Queue.getMessage Method " Url="html/c7c99379-dbb0-d9df-af02-0f752cdfbf5f.htm" />
     <HelpKINode Title="Queue.getMessage Method " Url="html/89965edc-111a-11ad-cb87-d1f93b268d88.htm" />
   </HelpKINode>
   <HelpKINode Title="getMessages method">
-    <HelpKINode Title="Queue.getMessages Method " Url="html/938c4d59-21d3-77da-f448-0686ea5ac22e.htm" />
     <HelpKINode Title="Queue.getMessages Method " Url="html/7eead5cd-cf48-8e14-0504-458b461f15fd.htm" />
+    <HelpKINode Title="Queue.getMessages Method " Url="html/938c4d59-21d3-77da-f448-0686ea5ac22e.htm" />
   </HelpKINode>
   <HelpKINode Title="getMetadata method">
     <HelpKINode Title="Queue.getMetadata Method " Url="html/9c3eb58d-3fc0-7ad4-3f4a-8ed38fa516b7.htm" />
     <HelpKINode Title="Queue.getMetadata Method " Url="html/48eb188d-2e07-8453-6cbb-87e00630b354.htm" />
   </HelpKINode>
   <HelpKINode Title="getQueues method">
-    <HelpKINode Title="Client.getQueues Method " Url="html/5aec70c5-aabc-17c3-0ac2-c40ae3465e87.htm" />
     <HelpKINode Title="Client.getQueues Method " Url="html/d053b90f-5278-a9f1-d3b4-1fd194b50e90.htm" />
+    <HelpKINode Title="Client.getQueues Method " Url="html/5aec70c5-aabc-17c3-0ac2-c40ae3465e87.htm" />
   </HelpKINode>
   <HelpKINode Title="getShards method" Url="html/fed75280-e809-43c0-26d3-9fbab9f6b55c.htm" />
   <HelpKINode Title="Host property">
-    <HelpKINode Title="Client.Host Property " Url="html/17db237b-aaf6-6d76-d49e-519e6c26253d.htm" />
     <HelpKINode Title="Client.Host Property " Url="html/c4862656-266b-495a-430f-068f7f9ed88f.htm" />
+    <HelpKINode Title="Client.Host Property " Url="html/17db237b-aaf6-6d76-d49e-519e6c26253d.htm" />
   </HelpKINode>
   <HelpKINode Title="ID property">
     <HelpKINode Title="Message.ID Property " Url="html/4d405a2f-516d-c169-98db-58b1578d2b6c.htm" />
@@ -272,22 +263,19 @@
     <HelpKINode Title="Message Class" Url="html/5e8444b0-0c47-f2b9-7708-60c5be38b10e.htm" />
     <HelpKINode Title="Message Members" Url="html/c043c28d-df34-1534-ba5d-551c2badaeec.htm" />
     <HelpKINode Title="Message Members" Url="html/4426b621-5d8b-c30d-8992-9ad9f25d2ef9.htm" />
-    <HelpKINode Title="about Message class" Url="html/27ec63cd-989c-db11-be2d-1a3cffad0da3.htm" />
     <HelpKINode Title="about Message class" Url="html/5e8444b0-0c47-f2b9-7708-60c5be38b10e.htm" />
-    <HelpKINode Title="all members" Url="html/4426b621-5d8b-c30d-8992-9ad9f25d2ef9.htm" />
+    <HelpKINode Title="about Message class" Url="html/27ec63cd-989c-db11-be2d-1a3cffad0da3.htm" />
     <HelpKINode Title="all members" Url="html/c043c28d-df34-1534-ba5d-551c2badaeec.htm" />
-    <HelpKINode Title="constructor" Url="html/d21b249e-1b44-6749-7c28-60a7deed06e8.htm" />
+    <HelpKINode Title="all members" Url="html/4426b621-5d8b-c30d-8992-9ad9f25d2ef9.htm" />
     <HelpKINode Title="constructor" Url="html/41fd946e-c8b5-4e4d-e452-995cb7bdf1cc.htm" />
-    <HelpKINode Title="methods" Url="html/9fdeac34-0386-c97c-4a63-983f2a7c7f90.htm" />
+    <HelpKINode Title="constructor" Url="html/d21b249e-1b44-6749-7c28-60a7deed06e8.htm" />
+    <HelpKINode Title="fields" Url="html/9c3be3ce-fd13-e434-60f0-aa6b43369bf7.htm" />
     <HelpKINode Title="methods" Url="html/f2fb7c44-d6c7-495a-bfff-4e5123cac23a.htm" />
-    <HelpKINode Title="properties" Url="html/4539a413-8120-438d-7e56-641a1776543f.htm" />
+    <HelpKINode Title="methods" Url="html/9fdeac34-0386-c97c-4a63-983f2a7c7f90.htm" />
     <HelpKINode Title="properties" Url="html/25c2010c-ec07-5e54-6d95-8fa9894fcc5d.htm" />
+    <HelpKINode Title="properties" Url="html/4539a413-8120-438d-7e56-641a1776543f.htm" />
   </HelpKINode>
-  <HelpKINode Title="Message property">
-    <HelpKINode Title="Claim.Message Property " Url="html/b7636e72-0f66-da21-34d2-dcd8dfd1166a.htm" />
-    <HelpKINode Title="Claim.Message Property " Url="html/af5ae2df-fc71-cdae-7592-d3183fc09433.htm" />
-    <HelpKINode Title="QueueMissingException.Message Property " Url="html/93432e83-1fec-0605-5e92-ee4c63a029cb.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Message property" Url="html/93432e83-1fec-0605-5e92-ee4c63a029cb.htm" />
   <HelpKINode Title="Message.Age property">
     <HelpKINode Title="Message.Age Property " Url="html/3fc7a984-8bc1-e0de-1206-627b0a9b918f.htm" />
     <HelpKINode Title="Message.Age Property " Url="html/7522658e-6ea7-baf7-fe27-03fa7662f35b.htm" />
@@ -297,44 +285,47 @@
     <HelpKINode Title="Message.Body Property " Url="html/08bac0e9-99fd-a4bb-2b7b-0e553d55df67.htm" />
   </HelpKINode>
   <HelpKINode Title="Message.Create method">
-    <HelpKINode Title="Message.Create Method " Url="html/1078a1ce-4cfc-24b1-935b-4478c9dda6dd.htm" />
     <HelpKINode Title="Message.Create Method " Url="html/2c8de6cf-b525-15f4-4b3b-68f4875f4cfd.htm" />
+    <HelpKINode Title="Message.Create Method " Url="html/1078a1ce-4cfc-24b1-935b-4478c9dda6dd.htm" />
   </HelpKINode>
   <HelpKINode Title="Message.ID property">
     <HelpKINode Title="Message.ID Property " Url="html/4d405a2f-516d-c169-98db-58b1578d2b6c.htm" />
     <HelpKINode Title="Message.ID Property " Url="html/2c7b3bcb-8000-b029-fea3-4c9ee6e97957.htm" />
   </HelpKINode>
   <HelpKINode Title="Message.Message constructor">
-    <HelpKINode Title="Message Constructor " Url="html/41fd946e-c8b5-4e4d-e452-995cb7bdf1cc.htm" />
     <HelpKINode Title="Message Constructor " Url="html/d21b249e-1b44-6749-7c28-60a7deed06e8.htm" />
+    <HelpKINode Title="Message Constructor " Url="html/41fd946e-c8b5-4e4d-e452-995cb7bdf1cc.htm" />
   </HelpKINode>
+  <HelpKINode Title="Message.MESSAGE_HREF_REGEX field" Url="html/13d03dbb-109c-ed96-63b5-2ecc757d55fe.htm" />
   <HelpKINode Title="Message.ToString method">
     <HelpKINode Title="Message.ToString Method " Url="html/96d32673-7f77-5cbf-2f82-1380c50a867a.htm" />
     <HelpKINode Title="Message.ToString Method " Url="html/c5f2c86e-3a47-088d-dcc7-6b26b97d75dc.htm" />
   </HelpKINode>
   <HelpKINode Title="Message.TTL property">
-    <HelpKINode Title="Message.TTL Property " Url="html/92911425-1122-bf4f-0abe-11b67af20aa2.htm" />
     <HelpKINode Title="Message.TTL Property " Url="html/b0a52161-33ac-b02c-9b03-029b93a72bf5.htm" />
+    <HelpKINode Title="Message.TTL Property " Url="html/92911425-1122-bf4f-0abe-11b67af20aa2.htm" />
   </HelpKINode>
   <HelpKINode Title="Messages property">
-    <HelpKINode Title="QueueStats.Messages Property " Url="html/78afa022-f11a-0379-b8cb-b3ce59147c4a.htm" />
+    <HelpKINode Title="Claim.Messages Property " Url="html/0e469393-a9f3-b549-a1ca-cb7e0c6236e9.htm" />
+    <HelpKINode Title="Claim.Messages Property " Url="html/6b2d7c0e-f5d2-0e11-0cf4-db2897c65354.htm" />
     <HelpKINode Title="QueueStats.Messages Property " Url="html/bc04f527-bee7-e22e-115b-9ab4922bc82f.htm" />
+    <HelpKINode Title="QueueStats.Messages Property " Url="html/78afa022-f11a-0379-b8cb-b3ce59147c4a.htm" />
   </HelpKINode>
   <HelpKINode Title="MessageStats class">
-    <HelpKINode Title="MessageStats Class" Url="html/93527c7a-b92e-f427-e3d8-4fd29dff5b98.htm" />
     <HelpKINode Title="MessageStats Class" Url="html/40d09c8c-21a5-332c-79ec-398e90c30837.htm" />
+    <HelpKINode Title="MessageStats Class" Url="html/93527c7a-b92e-f427-e3d8-4fd29dff5b98.htm" />
     <HelpKINode Title="MessageStats Members" Url="html/9050c0fd-bdd6-b7cd-f49c-e8ce0fcca85d.htm" />
     <HelpKINode Title="MessageStats Members" Url="html/5846f84d-1e22-0c1c-06c9-9d1f09b87c3d.htm" />
-    <HelpKINode Title="about MessageStats class" Url="html/40d09c8c-21a5-332c-79ec-398e90c30837.htm" />
     <HelpKINode Title="about MessageStats class" Url="html/93527c7a-b92e-f427-e3d8-4fd29dff5b98.htm" />
-    <HelpKINode Title="all members" Url="html/9050c0fd-bdd6-b7cd-f49c-e8ce0fcca85d.htm" />
+    <HelpKINode Title="about MessageStats class" Url="html/40d09c8c-21a5-332c-79ec-398e90c30837.htm" />
     <HelpKINode Title="all members" Url="html/5846f84d-1e22-0c1c-06c9-9d1f09b87c3d.htm" />
+    <HelpKINode Title="all members" Url="html/9050c0fd-bdd6-b7cd-f49c-e8ce0fcca85d.htm" />
     <HelpKINode Title="constructor" Url="html/65df40e5-97c5-5bbc-2876-5f138fc20efc.htm" />
     <HelpKINode Title="constructor" Url="html/c6ab7703-c33b-f825-0c91-e666f51cc774.htm" />
     <HelpKINode Title="methods" Url="html/d676dbf0-7ed1-d191-6402-732bd176ce02.htm" />
     <HelpKINode Title="methods" Url="html/ba945dec-026f-e14e-ffb9-f2d44831604b.htm" />
-    <HelpKINode Title="properties" Url="html/f19c1972-1233-ad1d-ef5a-4e33e6acdec0.htm" />
     <HelpKINode Title="properties" Url="html/1c222a3e-3844-e884-5d98-a6c56324dc1a.htm" />
+    <HelpKINode Title="properties" Url="html/f19c1972-1233-ad1d-ef5a-4e33e6acdec0.htm" />
   </HelpKINode>
   <HelpKINode Title="MessageStats.Claimed property">
     <HelpKINode Title="MessageStats.Claimed Property " Url="html/b52e9847-9a86-82c2-5e32-73f4e00c45df.htm" />
@@ -349,12 +340,13 @@
     <HelpKINode Title="MessageStats Constructor " Url="html/c6ab7703-c33b-f825-0c91-e666f51cc774.htm" />
   </HelpKINode>
   <HelpKINode Title="MessageStats.Total property">
-    <HelpKINode Title="MessageStats.Total Property " Url="html/80b7ba10-8de9-f00b-9f34-14e6307b6f75.htm" />
     <HelpKINode Title="MessageStats.Total Property " Url="html/2dddec30-4170-805c-b4a0-fba9d7536da8.htm" />
+    <HelpKINode Title="MessageStats.Total Property " Url="html/80b7ba10-8de9-f00b-9f34-14e6307b6f75.htm" />
   </HelpKINode>
+  <HelpKINode Title="MESSAGE_HREF_REGEX field" Url="html/13d03dbb-109c-ed96-63b5-2ecc757d55fe.htm" />
   <HelpKINode Title="Name property">
-    <HelpKINode Title="Queue.Name Property " Url="html/ad031b19-e64a-cd1a-fa73-281a74f8abba.htm" />
     <HelpKINode Title="Queue.Name Property " Url="html/2096c329-7efd-dd9d-ddba-e596c7fac42a.htm" />
+    <HelpKINode Title="Queue.Name Property " Url="html/ad031b19-e64a-cd1a-fa73-281a74f8abba.htm" />
     <HelpKINode Title="Shard.Name Property " Url="html/8c0cbc4a-acca-7a4c-7f15-a00c32a5d567.htm" />
   </HelpKINode>
   <HelpKINode Title="Options property" Url="html/cb4f1c26-5e4d-4db2-f7dc-c36b660e2f7f.htm" />
@@ -363,8 +355,8 @@
     <HelpKINode Title="MarconiRequest.patch Method " Url="html/94b24957-542d-0e81-2334-2d85d4e45922.htm" />
   </HelpKINode>
   <HelpKINode Title="patchClaim method">
-    <HelpKINode Title="Queue.patchClaim Method " Url="html/dc5ebecf-4746-99eb-0b59-1aa59f2cc963.htm" />
     <HelpKINode Title="Queue.patchClaim Method " Url="html/0ef7b0ea-e819-b474-fcda-b9b023b25eed.htm" />
+    <HelpKINode Title="Queue.patchClaim Method " Url="html/dc5ebecf-4746-99eb-0b59-1aa59f2cc963.htm" />
   </HelpKINode>
   <HelpKINode Title="popMessages method" Url="html/082f089c-5856-f631-7b1c-c64285f01a11.htm" />
   <HelpKINode Title="Port property">
@@ -394,8 +386,8 @@
     <HelpKINode Title="all members" Url="html/b6040a00-376f-b141-450b-355bb0d1b975.htm" />
     <HelpKINode Title="methods" Url="html/eb57771e-dc53-35db-6994-b1449704dbd8.htm" />
     <HelpKINode Title="methods" Url="html/c66d0c21-2d1f-ecba-b2a4-e1355d28cd1b.htm" />
-    <HelpKINode Title="properties" Url="html/50576949-765c-fdd0-a3f1-18a16b7e17f8.htm" />
     <HelpKINode Title="properties" Url="html/d7e324ee-1626-eb9d-9425-4a70180fb37e.htm" />
+    <HelpKINode Title="properties" Url="html/50576949-765c-fdd0-a3f1-18a16b7e17f8.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.claim method">
     <HelpKINode Title="Queue.claim Method " Url="html/cd411340-2e0a-95e9-448c-245ff00bf4cf.htm" />
@@ -413,34 +405,31 @@
     <HelpKINode Title="Queue.deleteMessages Method " Url="html/50d6d26f-cea6-ea26-b7dc-b2eb6e45cd99.htm" />
     <HelpKINode Title="Queue.deleteMessages Method " Url="html/9ff45284-22fb-b3f2-2746-e0eed4aa5a6c.htm" />
   </HelpKINode>
-  <HelpKINode Title="Queue.getClaim method">
-    <HelpKINode Title="Queue.getClaim Method " Url="html/31aa114d-cda4-933a-f7d7-0ac8a1f67179.htm" />
-    <HelpKINode Title="Queue.getClaim Method " Url="html/9d3b4958-18ab-e94c-a528-cd219f1b0954.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Queue.getClaim method" Url="html/31aa114d-cda4-933a-f7d7-0ac8a1f67179.htm" />
   <HelpKINode Title="Queue.getMessage method">
     <HelpKINode Title="Queue.getMessage Method " Url="html/c7c99379-dbb0-d9df-af02-0f752cdfbf5f.htm" />
     <HelpKINode Title="Queue.getMessage Method " Url="html/89965edc-111a-11ad-cb87-d1f93b268d88.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.getMessages method">
-    <HelpKINode Title="Queue.getMessages Method " Url="html/938c4d59-21d3-77da-f448-0686ea5ac22e.htm" />
     <HelpKINode Title="Queue.getMessages Method " Url="html/7eead5cd-cf48-8e14-0504-458b461f15fd.htm" />
+    <HelpKINode Title="Queue.getMessages Method " Url="html/938c4d59-21d3-77da-f448-0686ea5ac22e.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.getMetadata method">
     <HelpKINode Title="Queue.getMetadata Method " Url="html/48eb188d-2e07-8453-6cbb-87e00630b354.htm" />
     <HelpKINode Title="Queue.getMetadata Method " Url="html/9c3eb58d-3fc0-7ad4-3f4a-8ed38fa516b7.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.Name property">
-    <HelpKINode Title="Queue.Name Property " Url="html/2096c329-7efd-dd9d-ddba-e596c7fac42a.htm" />
     <HelpKINode Title="Queue.Name Property " Url="html/ad031b19-e64a-cd1a-fa73-281a74f8abba.htm" />
+    <HelpKINode Title="Queue.Name Property " Url="html/2096c329-7efd-dd9d-ddba-e596c7fac42a.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.patchClaim method">
-    <HelpKINode Title="Queue.patchClaim Method " Url="html/0ef7b0ea-e819-b474-fcda-b9b023b25eed.htm" />
     <HelpKINode Title="Queue.patchClaim Method " Url="html/dc5ebecf-4746-99eb-0b59-1aa59f2cc963.htm" />
+    <HelpKINode Title="Queue.patchClaim Method " Url="html/0ef7b0ea-e819-b474-fcda-b9b023b25eed.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.popMessages method" Url="html/082f089c-5856-f631-7b1c-c64285f01a11.htm" />
   <HelpKINode Title="Queue.postMessage method">
-    <HelpKINode Title="Queue.postMessage Method " Url="html/2b4f2fec-adb2-a060-acc0-9f764d55ac61.htm" />
     <HelpKINode Title="Queue.postMessage Method " Url="html/b7df42da-44f0-7e2f-e2ab-03ec044f2180.htm" />
+    <HelpKINode Title="Queue.postMessage Method " Url="html/2b4f2fec-adb2-a060-acc0-9f764d55ac61.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.releaseClaim method">
     <HelpKINode Title="Queue.releaseClaim Method " Url="html/188855f4-7d48-1389-cdfc-ff8d9d861396.htm" />
@@ -448,8 +437,8 @@
   </HelpKINode>
   <HelpKINode Title="Queue.setMetadata method" Url="html/75b5a826-0001-8029-97e5-027c6cae96b5.htm" />
   <HelpKINode Title="Queue.Stats property">
-    <HelpKINode Title="Queue.Stats Property " Url="html/8bbe2b74-c2e8-02f1-cd61-c02c70a1b201.htm" />
     <HelpKINode Title="Queue.Stats Property " Url="html/17f0164f-d1d1-c385-a0a5-133964c7386c.htm" />
+    <HelpKINode Title="Queue.Stats Property " Url="html/8bbe2b74-c2e8-02f1-cd61-c02c70a1b201.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.ToString method">
     <HelpKINode Title="Queue.ToString Method " Url="html/26622bcc-4ac6-a048-b435-7035c55dfba0.htm" />
@@ -460,8 +449,8 @@
     <HelpKINode Title="Queue.updateStats Method " Url="html/f5d6db69-5eac-e56b-f516-9b5bfd30221d.htm" />
   </HelpKINode>
   <HelpKINode Title="Queue.Uri property">
-    <HelpKINode Title="Queue.Uri Property " Url="html/1e89a2a0-3f0c-b978-544a-aebed9226027.htm" />
     <HelpKINode Title="Queue.Uri Property " Url="html/206558e5-0853-d055-3757-9e97b52c7e46.htm" />
+    <HelpKINode Title="Queue.Uri Property " Url="html/1e89a2a0-3f0c-b978-544a-aebed9226027.htm" />
   </HelpKINode>
   <HelpKINode Title="QueueMissingException class">
     <HelpKINode Title="QueueMissingException Class" Url="html/c7b9b459-b32b-e53f-cd55-811924c15e7d.htm" />
@@ -482,26 +471,26 @@
     <HelpKINode Title="QueueStats Members" Url="html/04de93fa-4c1c-a484-0826-6950af7b84a3.htm" />
     <HelpKINode Title="about QueueStats class" Url="html/01d905da-0d20-cbb5-3a35-93056a7281b3.htm" />
     <HelpKINode Title="about QueueStats class" Url="html/23cae34b-e646-8d4d-6b8f-a5e11eab18ec.htm" />
-    <HelpKINode Title="all members" Url="html/1889822d-092f-202d-599f-5bd33f56793f.htm" />
     <HelpKINode Title="all members" Url="html/04de93fa-4c1c-a484-0826-6950af7b84a3.htm" />
+    <HelpKINode Title="all members" Url="html/1889822d-092f-202d-599f-5bd33f56793f.htm" />
     <HelpKINode Title="constructor" Url="html/1a935381-ec72-b9ae-f4b1-666136ade2e9.htm" />
     <HelpKINode Title="constructor" Url="html/87ab801a-6a7c-3207-d947-5c32cd95c97c.htm" />
     <HelpKINode Title="methods" Url="html/d0ab89ec-6b51-4aba-b517-3a41c84a0cd7.htm" />
     <HelpKINode Title="methods" Url="html/f618f072-5990-b4b5-c894-e3ce7b48fe62.htm" />
-    <HelpKINode Title="properties" Url="html/4b4549d3-77af-3c2a-a9fa-4f0126104b88.htm" />
     <HelpKINode Title="properties" Url="html/98667c94-acba-a364-b23b-88eb5d00f407.htm" />
+    <HelpKINode Title="properties" Url="html/4b4549d3-77af-3c2a-a9fa-4f0126104b88.htm" />
   </HelpKINode>
   <HelpKINode Title="QueueStats.Messages property">
-    <HelpKINode Title="QueueStats.Messages Property " Url="html/78afa022-f11a-0379-b8cb-b3ce59147c4a.htm" />
     <HelpKINode Title="QueueStats.Messages Property " Url="html/bc04f527-bee7-e22e-115b-9ab4922bc82f.htm" />
+    <HelpKINode Title="QueueStats.Messages Property " Url="html/78afa022-f11a-0379-b8cb-b3ce59147c4a.htm" />
   </HelpKINode>
   <HelpKINode Title="QueueStats.QueueStats constructor">
-    <HelpKINode Title="QueueStats Constructor " Url="html/87ab801a-6a7c-3207-d947-5c32cd95c97c.htm" />
     <HelpKINode Title="QueueStats Constructor " Url="html/1a935381-ec72-b9ae-f4b1-666136ade2e9.htm" />
+    <HelpKINode Title="QueueStats Constructor " Url="html/87ab801a-6a7c-3207-d947-5c32cd95c97c.htm" />
   </HelpKINode>
   <HelpKINode Title="releaseClaim method">
-    <HelpKINode Title="Queue.releaseClaim Method " Url="html/de695ea5-d7a8-eddc-eccd-0e1d6fad3c10.htm" />
     <HelpKINode Title="Queue.releaseClaim Method " Url="html/188855f4-7d48-1389-cdfc-ff8d9d861396.htm" />
+    <HelpKINode Title="Queue.releaseClaim Method " Url="html/de695ea5-d7a8-eddc-eccd-0e1d6fad3c10.htm" />
   </HelpKINode>
   <HelpKINode Title="setMetadata method" Url="html/75b5a826-0001-8029-97e5-027c6cae96b5.htm" />
   <HelpKINode Title="Shard class">
@@ -522,30 +511,30 @@
   <HelpKINode Title="Shard.Uri property" Url="html/13d5a9fe-816f-8f54-2c8d-5f83f083fcc3.htm" />
   <HelpKINode Title="Shard.Weight property" Url="html/b4022baf-b54b-7f17-88d8-ef64edc41cb1.htm" />
   <HelpKINode Title="Stats property">
-    <HelpKINode Title="Queue.Stats Property " Url="html/8bbe2b74-c2e8-02f1-cd61-c02c70a1b201.htm" />
     <HelpKINode Title="Queue.Stats Property " Url="html/17f0164f-d1d1-c385-a0a5-133964c7386c.htm" />
+    <HelpKINode Title="Queue.Stats Property " Url="html/8bbe2b74-c2e8-02f1-cd61-c02c70a1b201.htm" />
   </HelpKINode>
   <HelpKINode Title="ToString method">
-    <HelpKINode Title="Message.ToString Method " Url="html/c5f2c86e-3a47-088d-dcc7-6b26b97d75dc.htm" />
     <HelpKINode Title="Message.ToString Method " Url="html/96d32673-7f77-5cbf-2f82-1380c50a867a.htm" />
-    <HelpKINode Title="Queue.ToString Method " Url="html/ee386a5f-30aa-7826-cf0b-52ab32054b3f.htm" />
+    <HelpKINode Title="Message.ToString Method " Url="html/c5f2c86e-3a47-088d-dcc7-6b26b97d75dc.htm" />
     <HelpKINode Title="Queue.ToString Method " Url="html/26622bcc-4ac6-a048-b435-7035c55dfba0.htm" />
+    <HelpKINode Title="Queue.ToString Method " Url="html/ee386a5f-30aa-7826-cf0b-52ab32054b3f.htm" />
   </HelpKINode>
   <HelpKINode Title="Total property">
-    <HelpKINode Title="MessageStats.Total Property " Url="html/80b7ba10-8de9-f00b-9f34-14e6307b6f75.htm" />
     <HelpKINode Title="MessageStats.Total Property " Url="html/2dddec30-4170-805c-b4a0-fba9d7536da8.htm" />
+    <HelpKINode Title="MessageStats.Total Property " Url="html/80b7ba10-8de9-f00b-9f34-14e6307b6f75.htm" />
   </HelpKINode>
   <HelpKINode Title="TTL property">
     <HelpKINode Title="Message.TTL Property " Url="html/92911425-1122-bf4f-0abe-11b67af20aa2.htm" />
     <HelpKINode Title="Message.TTL Property " Url="html/b0a52161-33ac-b02c-9b03-029b93a72bf5.htm" />
   </HelpKINode>
   <HelpKINode Title="updateStats method">
-    <HelpKINode Title="Queue.updateStats Method " Url="html/f5d6db69-5eac-e56b-f516-9b5bfd30221d.htm" />
     <HelpKINode Title="Queue.updateStats Method " Url="html/225994e9-9eea-c15a-ca20-91c8c70f4090.htm" />
+    <HelpKINode Title="Queue.updateStats Method " Url="html/f5d6db69-5eac-e56b-f516-9b5bfd30221d.htm" />
   </HelpKINode>
   <HelpKINode Title="Uri property">
-    <HelpKINode Title="Queue.Uri Property " Url="html/206558e5-0853-d055-3757-9e97b52c7e46.htm" />
     <HelpKINode Title="Queue.Uri Property " Url="html/1e89a2a0-3f0c-b978-544a-aebed9226027.htm" />
+    <HelpKINode Title="Queue.Uri Property " Url="html/206558e5-0853-d055-3757-9e97b52c7e46.htm" />
     <HelpKINode Title="Shard.Uri Property " Url="html/13d5a9fe-816f-8f54-2c8d-5f83f083fcc3.htm" />
   </HelpKINode>
   <HelpKINode Title="Version property">

@@ -9,6 +9,7 @@ using MarconiClient.V1.Model;
 using MarconiClient.Net;
 using NodeGrooverClient.Model;
 using System.Web;
+using MarconiClient.Util;
 
 namespace MarconiTest
 {
@@ -90,9 +91,17 @@ namespace MarconiTest
                 await test2.delete();
                 Console.Out.WriteLine(!await client.isQueueCreated(test2.Name));
             }
-            catch(Exception exception)
+            catch (HttpException exception)
             {
                 Console.Out.Write(exception.Message);
+            }
+            catch (QueueMissingException exception)
+            {
+ 
+            }
+            catch (TaskCanceledException exception)
+            {
+                Console.Error.WriteLine("Could not connect to server");
             }
 
             

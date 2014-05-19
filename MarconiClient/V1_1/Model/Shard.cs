@@ -150,8 +150,10 @@ namespace MarconiClient.V1_1.Model
         /// <param name="options">The options.</param>
         public async Task changeOptions(object options)
         {
-            _options = JsonConvert.SerializeObject(options);
-            HttpResponseMessage response = await request.patch(marconi_uri, JsonConvert.SerializeObject(options));
+
+            Dictionary<string, object> body = new Dictionary<string, object>();
+            body["options"] = options;
+            HttpResponseMessage response = await request.patch(marconi_uri, JsonConvert.SerializeObject(body));
             if (!response.IsSuccessStatusCode)
                 await Util.Util.throwException(response);
 
