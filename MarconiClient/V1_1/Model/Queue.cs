@@ -379,9 +379,43 @@ namespace MarconiClient.V1_1.Model
                             claimid = jsonObj["claim"]["id"].ToString();
                     }      
 
-                    return new Claim(messages, claimid);
+                    return new Claim(messages, claimid, ttl, 0);
                 }
                 return null;
+            }
+            else
+                throw new QueueMissingException();
+        }
+        /// <summary>
+        /// Gets the claim from an id.
+        /// </summary>
+        /// <param name="claimid">The claimid.</param>
+        /// <returns>The corresponding claim</returns>
+        /// <exception cref="QueueMissingException"></exception>
+        public async Task<Claim> getClaim(string claimid)
+        {
+            if (await CheckExist())
+            {
+                HttpResponseMessage response = await request.get(Uri + "/claims/" + claimid);
+                if (!response.IsSuccessStatusCode)
+                    await Util.Util.throwException(response);
+
+                string json = await response.Content.ReadAsStringAsync();
+                JObject jsonObj = JObject.Parse(json);
+                int age;
+                int ttl;
+                int.TryParse(jsonObj["age"].ToString(), out age);
+                int.TryParse(jsonObj["ttl"].ToString(), out ttl);
+
+                List<Message> messages = new List<Message>();
+                foreach (JObject obj in jsonObj["messages"])
+                {
+                    messages.Add(Message.Create(obj));
+                }
+
+                return new Claim(messages, claimid, ttl, age);
+
+
             }
             else
                 throw new QueueMissingException();

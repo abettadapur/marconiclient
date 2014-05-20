@@ -14,6 +14,8 @@ namespace MarconiClient.V1.Model
     public class Claim
     {
         private string _id;
+        private int _ttl;
+        private int _age;
         private List<Message> _messages;
         /// <summary>
         /// Gets the message associated with the claim.
@@ -32,14 +34,32 @@ namespace MarconiClient.V1.Model
         public string ClaimID { get { return _id; } }
 
         /// <summary>
+        /// Gets the TTL.
+        /// </summary>
+        /// <value>
+        /// The TTL.
+        /// </value>
+        public int TTL { get { return _ttl; } }
+
+        /// <summary>
+        /// Gets the age.
+        /// </summary>
+        /// <value>
+        /// The age.
+        /// </value>
+        public int Age { get { return _age; } }
+
+        /// <summary>
         /// Creates a new claim
         /// </summary>
         /// <param name="messages">The claimed messages.</param>
         /// <param name="id">The claim id.</param>
-        internal Claim(List<Message> messages, string id)
+        internal Claim(List<Message> messages, string id, int ttl, int age)
         {
             _messages = messages;
             _id = id;
+            _age = age;
+            _ttl = ttl;
         }
 
         /// <summary>

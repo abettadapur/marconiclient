@@ -98,6 +98,7 @@ namespace MarconiUnitTest.Unit.V1
             mock.Verify(foo => foo.get("http://localhost:200/v1/queues/newQueue/metadata"), Times.Once);
 
         }
+
         [TestMethod]
         [ExpectedException(typeof(HttpException))]
         public async Task getMetadataNegative()
@@ -460,6 +461,56 @@ namespace MarconiUnitTest.Unit.V1
             await queue.releaseClaim("claimid31");
             mock.Verify(foo => foo.delete("http://localhost:200/v1/queues/newQueue/claims/claimid31"), Times.Once);
 
+        }
+
+        [TestMethod]
+        public async Task getClaim()
+        {
+            HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+
+            Dictionary<string, object> responsebody = new Dictionary<string, object>()
+            {
+                {"age", 19},
+                {"ttl", 30},
+                {
+                    "messages", new List<Dictionary<string, object>>()
+                    {
+                        new Dictionary<string, object>()
+                        {
+                            {"href", "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b01?claim_id=claimid31" },
+                            {"ttl", 800},
+                            {"age", 100},
+                            {"body", "newBody"}
+                        },  new Dictionary<string, object>()
+                        {
+                            {"href", "/v1/queues/newQueue/messages/50b68a50d6f5b8c8a7c62b02?claim_id=claimid31" },
+                            {"ttl", 800},
+                            {"age", 100},
+                            {"body", "newBody2"}
+                        },
+
+                    }
+                }
+            };
+
+            string responsestr = JsonConvert.SerializeObject(responsebody);
+            response.Content = new StringContent(responsestr);
+
+            var mock = new Mock<IRequest>();
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/stats")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue")).Returns(Task.FromResult(response));
+            mock.Setup(foo => foo.get("http://localhost:200/v1/queues/newQueue/claims/claimid31")).Returns(Task.FromResult(response));
+
+            Queue queue = new Queue("newQueue", "http://localhost:200/v1/queues/newQueue", mock.Object);
+            Claim c = await queue.getClaim("claimid31");
+
+            Assert.AreEqual("claimid31", c.ClaimID);
+            Assert.AreEqual(2, c.Messages.Count);
+            Assert.AreEqual(19, c.Age);
+            Assert.AreEqual(30, c.TTL);
+            Assert.AreEqual("newBody", c.Messages[0].Body);
+
+            mock.Verify(foo => foo.get("http://localhost:200/v1/queues/newQueue/claims/claimid31"), Times.Once);
         }
 
 
